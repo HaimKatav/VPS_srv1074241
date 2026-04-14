@@ -2,5 +2,5 @@
 
 ## Generated
 <!-- openclaw:wiki:sources:index:start -->
-- No sources yet.
+- [[sources/wiki-information-architecture|Wiki Information Architecture]]
 <!-- openclaw:wiki:sources:index:end -->
