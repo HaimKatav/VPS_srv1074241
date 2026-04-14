@@ -3,15 +3,16 @@
 ## Generated
 <!-- openclaw:wiki:index:start -->
 - Render mode: `obsidian`
-- Total pages: 7
+- Total pages: 8
 - Claims: 0
-- Sources: 1
+- Sources: 2
 - Entities: 0
 - Concepts: 0
 - Syntheses: 0
 - Reports: 6
 
 ### Sources
+- [[sources/coordination-rules|Coordination Rules]]
 - [[sources/wiki-information-architecture|Wiki Information Architecture]]
 
 ### Entities

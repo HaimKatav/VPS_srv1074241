@@ -11,10 +11,14 @@
             "id": "d711777957a17a1e",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
+              "type": "markdown",
+              "state": {
+                "file": "sources/index.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "index"
             }
           }
         ]
@@ -90,6 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "sources/index.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -99,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks"
+              "title": "Backlinks for index"
             }
           },
           {
@@ -108,11 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "sources/index.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links"
+              "title": "Outgoing links from index"
             }
           },
           {
@@ -150,12 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "sources/index.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline"
+              "title": "Outline of index"
             }
           }
         ]
@@ -176,8 +183,34 @@
       "bases:Create new base": false
     }
   },
-  "active": "d711777957a17a1e",
+  "active": "13140d525f5f536e",
   "lastOpenFiles": [
+    "sources/wiki-information-architecture.md",
+    "reports/lint.md",
+    "syntheses/ux/index.md",
+    "concepts/architecture/index.md",
+    "concepts/coding/index.md",
+    "entities/infra/index.md",
+    "syntheses/journal/index.md",
+    "syntheses/projects/index.md",
+    "entities/services/index.md",
+    "syntheses/postmortems/index.md",
+    "concepts/meta/index.md",
+    "entities/projects/index.md",
+    "concepts/meta/wiki-information-architecture.md",
+    "concepts/ux/index.md",
+    "syntheses/milestones/index.md",
+    "concepts/ux",
+    "entities/infra",
+    "concepts/meta",
+    "concepts/coding",
+    "syntheses/postmortems",
+    "syntheses/journal",
+    "sources/bridge",
+    "syntheses/milestones",
+    "syntheses/ux",
+    "entities/projects",
+    "reports/contradictions.md",
     "index.md",
     "WIKI.md",
     "TraderB_Wiki_Plan.md",
@@ -187,9 +220,6 @@
     "sources/index.md",
     "reports/stale-pages.md",
     "reports/open-questions.md",
-    "reports/low-confidence.md",
-    "reports/index.md",
-    "reports/contradictions.md",
-    "reports/claim-health.md"
+    "reports/low-confidence.md"
   ]
 }

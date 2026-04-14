@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "sources/index.md",
+                "file": "concepts/meta/wiki-information-architecture.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "index"
+              "title": "wiki-information-architecture"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "sources/index.md",
+                "file": "concepts/meta/wiki-information-architecture.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for index"
+              "title": "Backlinks for wiki-information-architecture"
             }
           },
           {
@@ -113,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "sources/index.md",
+                "file": "concepts/meta/wiki-information-architecture.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from index"
+              "title": "Outgoing links from wiki-information-architecture"
             }
           },
           {
@@ -156,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "sources/index.md",
+                "file": "concepts/meta/wiki-information-architecture.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of index"
+              "title": "Outline of wiki-information-architecture"
             }
           }
         ]
@@ -185,18 +185,41 @@
   },
   "active": "d711777957a17a1e",
   "lastOpenFiles": [
+    "inbox.md",
+    "sources/index.md",
+    "sources/wiki-information-architecture.md",
+    "reports/lint.md",
+    "syntheses/ux/index.md",
+    "concepts/architecture/index.md",
+    "concepts/coding/index.md",
+    "entities/infra/index.md",
+    "syntheses/journal/index.md",
+    "syntheses/projects/index.md",
+    "entities/services/index.md",
+    "syntheses/postmortems/index.md",
+    "concepts/meta/index.md",
+    "entities/projects/index.md",
+    "concepts/meta/wiki-information-architecture.md",
+    "concepts/ux/index.md",
+    "syntheses/milestones/index.md",
+    "concepts/ux",
+    "entities/infra",
+    "concepts/meta",
+    "concepts/coding",
+    "syntheses/postmortems",
+    "syntheses/journal",
+    "sources/bridge",
+    "syntheses/milestones",
+    "syntheses/ux",
+    "entities/projects",
     "reports/contradictions.md",
     "index.md",
     "WIKI.md",
     "TraderB_Wiki_Plan.md",
-    "inbox.md",
     "AGENTS.md",
     "syntheses/index.md",
-    "sources/index.md",
     "reports/stale-pages.md",
     "reports/open-questions.md",
-    "reports/low-confidence.md",
-    "reports/index.md",
-    "reports/claim-health.md"
+    "reports/low-confidence.md"
   ]
 }
