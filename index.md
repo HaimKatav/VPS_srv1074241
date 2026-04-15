@@ -3,9 +3,9 @@
 ## Generated
 <!-- openclaw:wiki:index:start -->
 - Render mode: `obsidian`
-- Total pages: 13
+- Total pages: 17
 - Claims: 0
-- Sources: 7
+- Sources: 11
 - Entities: 0
 - Concepts: 0
 - Syntheses: 0
@@ -15,6 +15,10 @@
 - [[sources/coordination-rules|Coordination Rules]]
 - [[sources/milestone-workflow|Milestone Workflow]]
 - [[sources/persona-lifecycle|Persona Lifecycle]]
+- [[sources/runbook-adapt-a-persona|Runbook: Adapt a Persona]]
+- [[sources/runbook-add-a-persona|Runbook: Add a Persona]]
+- [[sources/runbook-remove-a-persona|Runbook: Remove a Persona]]
+- [[sources/runbooks-index|Runbooks Index]]
 - [[sources/scope-discipline-for-coding-tasks|Scope Discipline for Coding Tasks]]
 - [[sources/task-kickoff-flow|Task Kickoff Flow]]
 - [[sources/traderb-team-roster|TraderB Team Roster]]
