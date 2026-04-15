@@ -4,8 +4,8 @@ id: source.scope-discipline-for-coding-tasks
 title: Scope Discipline for Coding Tasks
 sourceType: local-file
 sourcePath: /opt/traderb-wiki/concepts/coding/scope-discipline.md
-ingestedAt: 2026-04-15T11:53:21.987Z
-updatedAt: 2026-04-15T11:53:21.987Z
+ingestedAt: 2026-04-15T14:54:06.781Z
+updatedAt: 2026-04-15T14:54:06.781Z
 status: active
 ---
 
@@ -14,8 +14,8 @@ status: active
 ## Source
 - Type: `local-file`
 - Path: `/opt/traderb-wiki/concepts/coding/scope-discipline.md`
-- Bytes: 5377
-- Updated: 2026-04-15T11:53:21.987Z
+- Bytes: 5500
+- Updated: 2026-04-15T14:54:06.781Z
 
 ## Content
 ````text
@@ -31,11 +31,11 @@ updatedAt: 2026-04-15
 
 # Scope Discipline for Coding Tasks
 
-> Governs what a coder does WHILE coding. For how tasks get defined before coding, see `concepts/process/task-kickoff-flow.md`.
+> Governs what a coder does WHILE coding. For how tasks get defined before coding, see [[concepts/process/task-kickoff-flow|task-kickoff-flow]].
 
 ## Rule
 
-By the time a coder starts writing code, the tasks have already been defined via the task-kickoff flow, approved by the relevant enforcers, AND the git environment has been prepared per the CI/CD readiness step (Step 6.5 of `concepts/process/task-kickoff-flow.md` — Eitan gates trading-touching work; coders self-serve per standing policy otherwise). From that moment:
+By the time a coder starts writing code, the tasks have already been defined via the task-kickoff flow, approved by the relevant enforcers, AND the git environment has been prepared per the CI/CD readiness step (Step 6.5 of [[concepts/process/task-kickoff-flow|task-kickoff-flow]] — Eitan gates trading-touching work; coders self-serve per standing policy otherwise). From that moment:
 
 1. **The touch-area map is authoritative.** The map was declared in the task's DOD and approved by the enforcers. The coder codes inside it.
 2. **Only edit what you declared you would edit.**
@@ -88,14 +88,14 @@ When mid-coding the coder discovers something outside the map that needs to chan
 4. **Up to 3 tries** to resolve:
    - Enforcer sanctions the change → coder proceeds, updates the task's touch-area map to reflect the new scope
    - Enforcer rejects → the change is NOT made; the original scope is delivered; a follow-up task is raised
-   - Enforcer unsure → escalate per `_shared/coordination-rules.md` ladder
+   - Enforcer unsure → escalate per [[sources/coordination-rules|coordination-rules]] ladder
 5. **Never** merge code that contains unplanned changes without a wiki-trackable sanction.
 
 ## Enforcement at code-review time
 
 - Code reviewer (the same enforcer who pre-approved the task, per task-kickoff flow) checks the delivered diff against the declared touch areas AND the approved implementation approach.
 - **Unplanned changes** in the diff → require explicit justification referencing the sanction handoff. Unjustified → reject.
-- **Parity-relevant unplanned changes** automatically fail QA and require a debug-meeting per `_shared/coordination-rules.md` QA bug loop.
+- **Parity-relevant unplanned changes** automatically fail QA and require a debug-meeting per [[sources/coordination-rules|coordination-rules]] QA bug loop.
 
 ## Applies to
 
@@ -104,9 +104,9 @@ When mid-coding the coder discovers something outside the map that needs to chan
 
 ## Interaction with other canonical pages
 
-- `concepts/process/task-kickoff-flow.md` — defines how the approved task arrives at the coder. Scope discipline takes over from that moment.
-- `concepts/process/milestone-workflow.md` — the wider context (milestone phases).
-- `_shared/coordination-rules.md` — escalation ladder used when enforcer sanction is unclear.
+- [[concepts/process/task-kickoff-flow|task-kickoff-flow]] — defines how the approved task arrives at the coder. Scope discipline takes over from that moment.
+- [[concepts/process/milestone-workflow|milestone-workflow]] — the wider context (milestone phases).
+- [[sources/coordination-rules|coordination-rules]] — escalation ladder used when enforcer sanction is unclear.
 
 ## What this is NOT
 

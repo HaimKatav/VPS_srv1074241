@@ -4,8 +4,8 @@ id: source.milestone-workflow
 title: Milestone Workflow
 sourceType: local-file
 sourcePath: /opt/traderb-wiki/concepts/process/milestone-workflow.md
-ingestedAt: 2026-04-15T14:53:29.424Z
-updatedAt: 2026-04-15T14:53:29.424Z
+ingestedAt: 2026-04-15T14:54:31.656Z
+updatedAt: 2026-04-15T14:54:31.656Z
 status: active
 ---
 
@@ -15,7 +15,7 @@ status: active
 - Type: `local-file`
 - Path: `/opt/traderb-wiki/concepts/process/milestone-workflow.md`
 - Bytes: 6267
-- Updated: 2026-04-15T14:53:29.424Z
+- Updated: 2026-04-15T14:54:31.656Z
 
 ## Content
 ```text

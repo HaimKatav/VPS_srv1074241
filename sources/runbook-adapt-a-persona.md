@@ -4,8 +4,8 @@ id: source.runbook-adapt-a-persona
 title: "Runbook: Adapt a Persona"
 sourceType: local-file
 sourcePath: /opt/traderb-wiki/concepts/process/runbooks/persona-adapt.md
-ingestedAt: 2026-04-15T14:04:29.624Z
-updatedAt: 2026-04-15T14:04:29.624Z
+ingestedAt: 2026-04-15T14:53:53.569Z
+updatedAt: 2026-04-15T14:53:53.569Z
 status: active
 ---
 
@@ -14,8 +14,8 @@ status: active
 ## Source
 - Type: `local-file`
 - Path: `/opt/traderb-wiki/concepts/process/runbooks/persona-adapt.md`
-- Bytes: 9064
-- Updated: 2026-04-15T14:04:29.624Z
+- Bytes: 9265
+- Updated: 2026-04-15T14:53:53.569Z
 
 ## Content
 ````text
@@ -31,7 +31,7 @@ updatedAt: 2026-04-15
 
 # Runbook: Adapt an Existing Persona
 
-> Executable checklist for updating a persona's SOUL, AGENTS.md, role scope, or enforcer relationships. Paired with `concepts/process/persona-lifecycle.md` (the policy).
+> Executable checklist for updating a persona's SOUL, AGENTS.md, role scope, or enforcer relationships. Paired with [[concepts/process/persona-lifecycle|persona-lifecycle]] (the policy).
 
 ## Two paths — material vs minor
 
@@ -92,11 +92,11 @@ openclaw agents set-identity --agent <agent-id> --from-identity
 
 **Verify:** `openclaw agents list | grep -A2 <agent-id>` shows the new identity.
 
-#### 4. Update `_shared/coordination-rules.md` enforcer matrix (if relationships shifted)
+#### 4. Update [[sources/coordination-rules|coordination-rules]] enforcer matrix (if relationships shifted)
 
 Every enforcer-relationship row that involves this persona — on either side — must match the new reality.
 
-#### 5. Update `entities/team/index.md` roster
+#### 5. Update [[entities/team/index|team roster]] roster
 
 Update the persona's row to reflect:
 - New one-line role description (if changed)
@@ -120,9 +120,9 @@ Review each hit. Update where the semantics changed.
 #### 7. If the change affects process flows, update the relevant wiki concept/process pages
 
 Examples:
-- If adaptation changes the task-kickoff flow → update `concepts/process/task-kickoff-flow.md`
-- If adaptation changes the QA bug loop → update `_shared/coordination-rules.md`
-- If adaptation introduces new review responsibilities → update `concepts/coding/scope-discipline.md`
+- If adaptation changes the task-kickoff flow → update [[concepts/process/task-kickoff-flow|task-kickoff-flow]]
+- If adaptation changes the QA bug loop → update [[sources/coordination-rules|coordination-rules]]
+- If adaptation introduces new review responsibilities → update [[concepts/coding/scope-discipline|scope-discipline]]
 
 Each such update also gets re-ingested.
 
@@ -221,18 +221,18 @@ This reclassification is normal — err on the side of caution.
 
 ## References
 
-- Policy: `concepts/process/persona-lifecycle.md`
-- Related runbooks: `concepts/process/runbooks/persona-add.md`, `concepts/process/runbooks/persona-remove.md`
+- Policy: [[concepts/process/persona-lifecycle|persona-lifecycle]]
+- Related runbooks: [[concepts/process/runbooks/persona-add|persona-add runbook]], [[concepts/process/runbooks/persona-remove|persona-remove runbook]]
 - OpenClaw docs: https://docs.openclaw.ai/cli/agents
 
 ## Cascading review batch (mandatory for material changes)
 
-Per `concepts/process/persona-lifecycle.md` §Cascading review rule, material-adapt events produce a single review batch BEFORE execution. Minor edits are exempt from batch review but still commit atomically.
+Per [[concepts/process/persona-lifecycle|persona-lifecycle]] §Cascading review rule, material-adapt events produce a single review batch BEFORE execution. Minor edits are exempt from batch review but still commit atomically.
 
 Material-adapt batch covers (as applicable to what's changing):
 
-- Updated `_shared/coordination-rules.md` enforcer matrix (if relationships shift)
-- Updated `entities/team/index.md` (if role description or relationships change)
+- Updated [[sources/coordination-rules|coordination-rules]] enforcer matrix (if relationships shift)
+- Updated [[entities/team/index|team roster]] (if role description or relationships change)
 - Updated `/opt/traderb/SOUL.md` routing table (if the domain one-liner changes)
 - Updated `openclaw/SKILLS_REGISTRY.md` (if skills shift)
 - Updated `openclaw/GOVERNANCE.md` review chain (if reviewer role changes)

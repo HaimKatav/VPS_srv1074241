@@ -181,7 +181,10 @@ Agents may read lower-confidence pages for context but **must not cite** inferre
 - [[sources/persona-add|Persona Add]]
 - [[sources/persona-lifecycle|Persona Lifecycle]]
 - [[sources/persona-remove|Persona Remove]]
+- [[sources/runbook-adapt-a-persona|Runbook: Adapt a Persona]]
 - [[sources/runbook-remove-a-persona|Runbook: Remove a Persona]]
 - [[sources/scope-discipline|Scope Discipline]]
+- [[sources/scope-discipline-for-coding-tasks|Scope Discipline for Coding Tasks]]
 - [[sources/task-kickoff-flow|Task Kickoff Flow]]
+- [[sources/traderb-team-roster|TraderB Team Roster]]
 <!-- openclaw:wiki:related:end -->
