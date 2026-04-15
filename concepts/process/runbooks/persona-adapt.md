@@ -24,7 +24,7 @@ Before starting, classify the change. This determines the approval bar and the d
 - Model change (e.g. promoting a persona from Sonnet to Opus)
 - Any change that affects how OTHER personas interact with this one
 
-### Minor change (Ari's judgment, no Haim gate)
+### Minor change (`project-lead`'s judgment, no Haim gate)
 - Wording clarifications in SOUL or AGENTS
 - Skill list refresh (add/remove a skill reference)
 - Tone refinement
@@ -150,7 +150,7 @@ git push origin main
 ### Prerequisites
 
 - [ ] Change is genuinely minor by the definition above
-- [ ] Ari (or admin during Stage 1) has inspected the change and agrees it's minor
+- [ ] `project-lead` (or admin during Stage 1) has inspected the change and agrees it's minor
 
 ### Steps
 

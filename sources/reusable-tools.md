@@ -4,8 +4,8 @@ id: source.reusable-tools
 title: reusable tools
 sourceType: local-file
 sourcePath: /opt/traderb-wiki/concepts/architecture/reusable-tools.md
-ingestedAt: 2026-04-15T20:53:59.175Z
-updatedAt: 2026-04-15T20:53:59.175Z
+ingestedAt: 2026-04-15T22:48:03.390Z
+updatedAt: 2026-04-15T22:48:03.390Z
 status: active
 ---
 
@@ -14,8 +14,8 @@ status: active
 ## Source
 - Type: `local-file`
 - Path: `/opt/traderb-wiki/concepts/architecture/reusable-tools.md`
-- Bytes: 3818
-- Updated: 2026-04-15T20:53:59.175Z
+- Bytes: 3850
+- Updated: 2026-04-15T22:48:03.390Z
 
 ## Content
 ```text
@@ -82,8 +82,8 @@ Other emerging candidates on TraderB:
 
 ## Enforcement
 
-- **Idan flags duplicated logic in review.** "You copied 30 lines from `brokers/tradovate_adapter.py` into `brokers/topstepx_adapter.py` — extract."
-- **Builders consult this page before deciding to extract.** If unsure, handoff to Idan for a quick judgment call.
+- **`software-architect` flags duplicated logic in review.** "You copied 30 lines from `brokers/tradovate_adapter.py` into `brokers/topstepx_adapter.py` — extract."
+- **Builders consult this page before deciding to extract.** If unsure, handoff to `software-architect` for a quick judgment call.
 - **New tools get a brief ADR** in `concepts/architecture/` if they introduce a non-trivial pattern.
 
 ## Interaction with other canonical pages

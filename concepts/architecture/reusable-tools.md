@@ -61,8 +61,8 @@ Other emerging candidates on TraderB:
 
 ## Enforcement
 
-- **Idan flags duplicated logic in review.** "You copied 30 lines from `brokers/tradovate_adapter.py` into `brokers/topstepx_adapter.py` — extract."
-- **Builders consult this page before deciding to extract.** If unsure, handoff to Idan for a quick judgment call.
+- **`software-architect` flags duplicated logic in review.** "You copied 30 lines from `brokers/tradovate_adapter.py` into `brokers/topstepx_adapter.py` — extract."
+- **Builders consult this page before deciding to extract.** If unsure, handoff to `software-architect` for a quick judgment call.
 - **New tools get a brief ADR** in `concepts/architecture/` if they introduce a non-trivial pattern.
 
 ## Interaction with other canonical pages

@@ -51,12 +51,12 @@ For any trade, the viewer sees:
 
 This requirement is touched by many personas — coordination matters.
 
-- **Noa (strategy-architect)** — ensures the signal engine emits decision steps as *structured data*, not just fires-and-forgets. Every strategy component exposes its reasoning.
-- **Gal (logging-specialist)** — logs every decision step with structure that is queryable AND renderable in the UI. Log schema owns this.
-- **Amit (transparency-agent)** — owns the principle of explainability; reviews whether each decision is actually understandable from the log, not just present. "Is this enough to understand the trade?" is Amit's lens.
-- **Rotem (ux-designer)** — designs the trade-detail view so a trader can scan the decision trail quickly. Information hierarchy is her lane.
-- **Maya (frontend-dev)** — implements the view. HTML/CSS/JS.
-- **Guy (qa-manager)** — frames QA that includes: every trade logged has a complete reasoning trail; every trade's UI view renders all five sections above.
+- **`strategy-architect`** — ensures the signal engine emits decision steps as *structured data*, not just fires-and-forgets. Every strategy component exposes its reasoning.
+- **`logging-specialist`** — logs every decision step with structure that is queryable AND renderable in the UI. Log schema owns this.
+- **`transparency-agent`** — owns the principle of explainability; reviews whether each decision is actually understandable from the log, not just present. "Is this enough to understand the trade?" is `transparency-agent`'s lens.
+- **`ux-designer`** — designs the trade-detail view so a trader can scan the decision trail quickly. Information hierarchy is her lane.
+- **`frontend-dev`** — implements the view. HTML/CSS/JS.
+- **`qa-manager`** — frames QA that includes: every trade logged has a complete reasoning trail; every trade's UI view renders all five sections above.
 
 ## Why this is non-negotiable
 
@@ -64,11 +64,11 @@ The bot will trade real money. Trading real money on decisions we cannot explain
 
 ## Enforcement
 
-- **Amit owns the principle.** If a strategy change ships without decision-step instrumentation, Amit blocks it.
-- **Gal owns the log schema.** If logging leaves out a reasoning field, Gal blocks it.
-- **Rotem + Maya own the UI.** If the trade-detail view hides or flattens the reasoning, Rotem blocks at review.
-- **Guy owns the QA frame** — requires every component to test its "emits reasoning" contract.
-- **Idan** ensures the instrumentation is architecturally clean, not bolted on — reasoning emission is part of the component protocol, not an optional extra.
+- **`transparency-agent` owns the principle.** If a strategy change ships without decision-step instrumentation, `transparency-agent` blocks it.
+- **`logging-specialist` owns the log schema.** If logging leaves out a reasoning field, `logging-specialist` blocks it.
+- **`ux-designer` + `frontend-dev` own the UI.** If the trade-detail view hides or flattens the reasoning, `ux-designer` blocks at review.
+- **`qa-manager` owns the QA frame** — requires every component to test its "emits reasoning" contract.
+- **`software-architect`** ensures the instrumentation is architecturally clean, not bolted on — reasoning emission is part of the component protocol, not an optional extra.
 
 ## Anti-patterns
 
@@ -79,7 +79,7 @@ The bot will trade real money. Trading real money on decisions we cannot explain
 
 ## Integration with config toggles
 
-When the UI shows which components fired, it also shows which components were **available but disabled** via config toggles (see `concepts/architecture/configurable-strategy-components.md`). This helps Noa + Haim quickly answer "would this trade have been different if X was on?"
+When the UI shows which components fired, it also shows which components were **available but disabled** via config toggles (see `concepts/architecture/configurable-strategy-components.md`). This helps `strategy-architect` + Haim quickly answer "would this trade have been different if X was on?"
 
 ## Interaction with other canonical pages
 
@@ -87,7 +87,7 @@ When the UI shows which components fired, it also shows which components were **
 - [[concepts/architecture/config-lineage|config-lineage]] — config link per trade; diff view
 - [[concepts/architecture/reusable-tools|reusable-tools]] — graph tool is the visualization primitive
 - `/opt/traderb/openclaw/PROJECT_VISION.md` §Human oversight — the "no black box" principle this page operationalizes (outside wiki vault)
-- [[sources/coordination-rules|coordination-rules]] — Guy frames QA; Idan enforces clean instrumentation
+- [[sources/coordination-rules|coordination-rules]] — `qa-manager` frames QA; `software-architect` enforces clean instrumentation
 
 ## What this is NOT
 

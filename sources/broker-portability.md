@@ -4,8 +4,8 @@ id: source.broker-portability
 title: broker portability
 sourceType: local-file
 sourcePath: /opt/traderb-wiki/concepts/architecture/broker-portability.md
-ingestedAt: 2026-04-15T20:54:11.883Z
-updatedAt: 2026-04-15T20:54:11.883Z
+ingestedAt: 2026-04-15T22:48:04.207Z
+updatedAt: 2026-04-15T22:48:04.207Z
 status: active
 ---
 
@@ -14,8 +14,8 @@ status: active
 ## Source
 - Type: `local-file`
 - Path: `/opt/traderb-wiki/concepts/architecture/broker-portability.md`
-- Bytes: 4897
-- Updated: 2026-04-15T20:54:11.883Z
+- Bytes: 4899
+- Updated: 2026-04-15T22:48:04.207Z
 
 ## Content
 ```text
@@ -75,13 +75,13 @@ Adding a new broker = implement two protocols + tests. Zero changes to strategy,
 
 ## Adding a new broker — the procedure
 
-1. Shira (compliance) produces the rule parameterization for the new firm (daily loss limits, max contracts, consistency, drawdown tracking — per the firm's current rulebook).
-2. Dan (data-engineer) reviews the broker's market data characteristics for parity compatibility.
-3. Lior (python-dev) implements `BrokerClient` + `MarketDataFeed` for the new broker in `brokers/<name>_adapter.py`.
-4. Idan (software-architect) reviews for protocol conformance — no leaks, no broker-specific assumptions creeping upstream.
-5. Guy (qa-manager) frames a QA scope that includes: contract tests pass, parity snapshots pass on replay-of-live-data, compliance rules load correctly for the new firm.
-6. Tamar (security-specialist) reviews auth + API credential handling.
-7. Ari schedules and ships as a milestone.
+1. `compliance-officer` (compliance) produces the rule parameterization for the new firm (daily loss limits, max contracts, consistency, drawdown tracking — per the firm's current rulebook).
+2. `data-engineer` reviews the broker's market data characteristics for parity compatibility.
+3. `python-dev` implements `BrokerClient` + `MarketDataFeed` for the new broker in `brokers/<name>_adapter.py`.
+4. `software-architect` reviews for protocol conformance — no leaks, no broker-specific assumptions creeping upstream.
+5. `qa-manager` frames a QA scope that includes: contract tests pass, parity snapshots pass on replay-of-live-data, compliance rules load correctly for the new firm.
+6. `security-specialist` reviews auth + API credential handling.
+7. `project-lead` schedules and ships as a milestone.
 
 ## When to revisit the protocol itself
 

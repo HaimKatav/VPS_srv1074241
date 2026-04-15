@@ -22,15 +22,15 @@ This page defines how a milestone moves from "Haim says go" to "milestone closed
 Haim defines the milestone in plain language. Output: one sentence of intent + rough success criteria. Intake happens in whichever channel Haim uses (Telegram, chat, meeting note).
 
 ### 2. DECOMPOSITION
-Ari (project-lead) translates the milestone into phase buckets: research / design / implementation / QA. Produces a crew manifest (which personas, what role). Posts the plan to Haim for approval.
+`project-lead` translates the milestone into phase buckets: research / design / implementation / QA. Produces a crew manifest (which personas, what role). Posts the plan to Haim for approval.
 
 **Gate:** no work starts until Haim approves the plan.
 
 ### 3. RESEARCH PHASE
-Domain specialists — typically Noa (strategy), Dan (data/pipeline), Idan (software architecture), Tamar (security), Omer (risk), Shira (compliance) — produce research notes, ADRs, and recommended approaches for anything thats not already decided.
+Domain specialists — typically `strategy-architect` (strategy), `data-engineer` (data/pipeline), `software-architect` (software architecture), `security-specialist` (security), `risk-manager` (risk), `compliance-officer` (compliance) — produce research notes, ADRs, and recommended approaches for anything thats not already decided.
 
-- Output: handoff files to Ari with structured findings + recommendations.
-- Ari ingests to concepts/<domain>/ (for principle-level findings) or syntheses/<domain>/ (for situation-specific recommendations) with status proposed.
+- Output: handoff files to `project-lead` with structured findings + recommendations.
+- `project-lead` ingests to concepts/<domain>/ (for principle-level findings) or syntheses/<domain>/ (for situation-specific recommendations) with status proposed.
 - Provenance: inferred until Haim reviews.
 
 **Gate:** research outputs reviewed by Haim. Approved findings flip to approved-by-haim: true.
@@ -38,10 +38,10 @@ Domain specialists — typically Noa (strategy), Dan (data/pipeline), Idan (soft
 ### 4. DESIGN PHASE
 Architects and designers produce detailed specs based on approved research.
 
-- Idan — software architecture (module splits, abstractions, ADRs)
-- Noa — strategy logic spec
-- Rotem — UX spec
-- Dan — data pipeline spec
+- `software-architect` — software architecture (module splits, abstractions, ADRs)
+- `strategy-architect` — strategy logic spec
+- `ux-designer` — UX spec
+- `data-engineer` — data pipeline spec
 - All output lands as syntheses/<domain>/<spec-name>.md with status proposed.
 
 Specs must include: scope (whats in, whats NOT), DOD, dependencies, tests to add, risks, rollback plan.
@@ -54,27 +54,27 @@ Haim reviews the bundle of specs for the milestone.
 - Disputed specs go back to research with explicit questions.
 
 ### 6. IMPLEMENTATION PHASE
-Builders (Lior, Maya, Dan, Gal) receive the approved specs and enter the **task-kickoff flow** (see concepts/process/task-kickoff-flow.md):
+Builders (`python-dev`, `frontend-dev`, `data-engineer`, `logging-specialist`) receive the approved specs and enter the **task-kickoff flow** (see concepts/process/task-kickoff-flow.md):
 
-- Ari distributes the spec to relevant enforcers; enforcers produce domain breakdowns; align (escalate to Haim on conflict).
-- Ari collates a unified brief; coder creates concrete tasks with DOD and touch-area maps; enforcers approve the task list (up to 3 revise rounds).
-- **Step 6.5 CI/CD preparation** (Eitan): git environment prepared. Gate model for trading-touching code; coder self-serve per standing policy otherwise. No coding until git is ready.
+- `project-lead` distributes the spec to relevant enforcers; enforcers produce domain breakdowns; align (escalate to Haim on conflict).
+- `project-lead` collates a unified brief; coder creates concrete tasks with DOD and touch-area maps; enforcers approve the task list (up to 3 revise rounds).
+- **Step 6.5 CI/CD preparation** (`devops`): git environment prepared. Gate model for trading-touching code; coder self-serve per standing policy otherwise. No coding until git is ready.
 - Only then coding begins. **Scope discipline** (concepts/coding/scope-discipline.md) applies from that moment.
 - Code review happens continuously under the enforcer matrix (see _shared/coordination-rules.md).
 
 ### 7. QA CYCLE
-**Guy** (qa-manager) defined the QA frame in step 6 (task-kickoff-flow step 2). **Yael** executes per Guy's frame, creating her own concrete testing sub-tasks for each item in the frame, and tests against the approved spec's DOD. Bug loop per coordination-rules §QA bug loop — up to 3 fix-retest cycles before Guy escalates to a debug meeting.
+**`qa-manager`** (qa-manager) defined the QA frame in step 6 (task-kickoff-flow step 2). **`qa-tester`** executes per `qa-manager`'s frame, creating her own concrete testing sub-tasks for each item in the frame, and tests against the approved spec's DOD. Bug loop per coordination-rules §QA bug loop — up to 3 fix-retest cycles before `qa-manager` escalates to a debug meeting.
 
 **Gate:** QA passes OR a debug-meeting decision is produced (re-scope / re-implement / re-design).
 
 ### 8. ENFORCER SIGN-OFF
-Relevant enforcers confirm their domain is clean before Ari closes:
-- Idan — architecture clean, no debt introduced
-- Omer / Shira — if trading logic / prop rules touched
-- Tamar — if auth / secrets touched
-- Dan — if data pipeline touched
-- Rotem — if UI changed
-- Eitan — CI green, deployment ready
+Relevant enforcers confirm their domain is clean before `project-lead` closes:
+- `software-architect` — architecture clean, no debt introduced
+- `risk-manager` / `compliance-officer` — if trading logic / prop rules touched
+- `security-specialist` — if auth / secrets touched
+- `data-engineer` — if data pipeline touched
+- `ux-designer` — if UI changed
+- `devops` — CI green, deployment ready
 
 ### 9. MILESTONE CLOSE-OUT
 `project-lead` compiles the close-out summary: what shipped, what didn't, what was learned.
@@ -92,7 +92,7 @@ Relevant enforcers confirm their domain is clean before Ari closes:
 | After Decomposition (step 2) | Haim | Crew manifest revised |
 | After Research (step 3) | Haim | Research re-scoped or extended |
 | After Design (step 5) | Haim | Design returned with questions |
-| After QA (step 7) | Yael + Ari | Debug meeting, decision page |
+| After QA (step 7) | `qa-tester` + `project-lead` | Debug meeting, decision page |
 | After Enforcer sign-off (step 8) | Enforcers | Rework per enforcers direction |
 | Milestone close (step 9) | Haim | Milestone reopened |
 

@@ -60,8 +60,8 @@ Keep each runbook under ~200 lines if possible. If a runbook naturally exceeds t
 
 ## Who owns runbooks
 
-- **Ari (post-Stage-1)** is the primary executor and owns runbook currency (keep them in sync with OpenClaw CLI changes and actual process evolution).
-- **Admin scribe (during Stage 1)** stands in for Ari.
+- **`project-lead` (post-Stage-1)** is the primary executor and owns runbook currency (keep them in sync with OpenClaw CLI changes and actual process evolution).
+- **Admin scribe (during Stage 1)** stands in for `project-lead`.
 - **Any persona** may propose updates via handoff if they notice drift.
 - **Haim approves** any change to a runbook that embeds new approval bars or changes the approval chain.
 

@@ -1,21 +1,21 @@
 ---
 pageType: source
 id: source.persona-add
-title: Persona Add
+title: persona add
 sourceType: local-file
 sourcePath: /opt/traderb-wiki/concepts/process/runbooks/persona-add.md
-ingestedAt: 2026-04-15T14:52:26.924Z
-updatedAt: 2026-04-15T14:52:26.924Z
+ingestedAt: 2026-04-15T22:48:03.888Z
+updatedAt: 2026-04-15T22:48:03.888Z
 status: active
 ---
 
-# Persona Add
+# persona add
 
 ## Source
 - Type: `local-file`
 - Path: `/opt/traderb-wiki/concepts/process/runbooks/persona-add.md`
-- Bytes: 10640
-- Updated: 2026-04-15T14:52:26.924Z
+- Bytes: 10728
+- Updated: 2026-04-15T22:48:03.888Z
 
 ## Content
 ````text
@@ -45,7 +45,7 @@ updatedAt: 2026-04-15
 ## Stage 1 (bootstrap) vs steady-state executor
 
 - **During Stage 1**: admin scribe executes with Haim reviewing inline
-- **Post-Stage-1**: Ari executes; Haim approves only the drafts (step 2) and smoke test result (step 8)
+- **Post-Stage-1**: `project-lead` executes; Haim approves only the drafts (step 2) and smoke test result (step 8)
 
 ## Steps
 
@@ -154,7 +154,7 @@ Commit this file change as part of the /opt/traderb git repo (or append to the n
 
 Edit `/home/openclaw/.openclaw/workspaces/_shared/coordination-rules.md`. In the "Enforcer matrix — who you answer to, by aspect" table:
 - Add a new row for the new persona (their own enforcer relationships)
-- Update any existing rows where this persona becomes an enforcer (e.g. if adding a QA Manager, Yael's row changes: QA enforcer column becomes `QA Manager`)
+- Update any existing rows where this persona becomes an enforcer (e.g. if adding a QA Manager, `qa-tester`'s row changes: QA enforcer column becomes `QA Manager`)
 
 ### 9. Update [[entities/team/index|team roster]] roster
 
@@ -162,7 +162,7 @@ Edit `/opt/traderb-wiki/entities/team/index.md`. Add a row to the main table AND
 
 ### 10. Update any existing persona AGENTS.md whose enforcer relationships shift
 
-Example: adding a QA Manager means every existing implementer (Lior, Maya, Dan, Gal) now has QA Manager above Yael in their QA flow. Their AGENTS.md enforcer sections need updates.
+Example: adding a QA Manager means every existing implementer (`python-dev`, `frontend-dev`, `data-engineer`, `logging-specialist`) now has QA Manager above `qa-tester` in their QA flow. Their AGENTS.md enforcer sections need updates.
 
 Keep this update surgical — only touch the sections that actually change. Do not rewrite AGENTS.md entirely.
 
@@ -260,7 +260,7 @@ If workspace was already trashed by `agents delete`, files can be restored from 
 
 - Policy: [[concepts/process/persona-lifecycle|persona-lifecycle]]
 - OpenClaw docs: https://docs.openclaw.ai/cli/agents
-- Reference example: Idan's creation commit in `HaimKatav/traderb-personas` (commit `40829e9`, 2026-04-14) — first real usage of this flow during bootstrap
+- Reference example: `software-architect`'s creation commit in `HaimKatav/traderb-personas` (commit `40829e9`, 2026-04-14) — first real usage of this flow during bootstrap
 
 ## Grep safety net (run before committing)
 

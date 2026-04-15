@@ -1,21 +1,21 @@
 ---
 pageType: source
 id: source.persona-adapt
-title: Persona Adapt
+title: persona adapt
 sourceType: local-file
 sourcePath: /opt/traderb-wiki/concepts/process/runbooks/persona-adapt.md
-ingestedAt: 2026-04-15T14:52:51.534Z
-updatedAt: 2026-04-15T14:52:51.534Z
+ingestedAt: 2026-04-15T22:48:04.733Z
+updatedAt: 2026-04-15T22:48:04.733Z
 status: active
 ---
 
-# Persona Adapt
+# persona adapt
 
 ## Source
 - Type: `local-file`
 - Path: `/opt/traderb-wiki/concepts/process/runbooks/persona-adapt.md`
-- Bytes: 9265
-- Updated: 2026-04-15T14:52:51.534Z
+- Bytes: 9287
+- Updated: 2026-04-15T22:48:04.733Z
 
 ## Content
 ````text
@@ -45,7 +45,7 @@ Before starting, classify the change. This determines the approval bar and the d
 - Model change (e.g. promoting a persona from Sonnet to Opus)
 - Any change that affects how OTHER personas interact with this one
 
-### Minor change (Ari's judgment, no Haim gate)
+### Minor change (`project-lead`'s judgment, no Haim gate)
 - Wording clarifications in SOUL or AGENTS
 - Skill list refresh (add/remove a skill reference)
 - Tone refinement
@@ -171,7 +171,7 @@ git push origin main
 ### Prerequisites
 
 - [ ] Change is genuinely minor by the definition above
-- [ ] Ari (or admin during Stage 1) has inspected the change and agrees it's minor
+- [ ] `project-lead` (or admin during Stage 1) has inspected the change and agrees it's minor
 
 ### Steps
 

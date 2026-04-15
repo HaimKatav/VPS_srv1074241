@@ -1,21 +1,21 @@
 ---
 pageType: source
 id: source.scope-discipline
-title: Scope Discipline
+title: scope discipline
 sourceType: local-file
 sourcePath: /opt/traderb-wiki/concepts/coding/scope-discipline.md
-ingestedAt: 2026-04-15T14:53:04.564Z
-updatedAt: 2026-04-15T14:53:04.564Z
+ingestedAt: 2026-04-15T22:48:06.126Z
+updatedAt: 2026-04-15T22:48:06.126Z
 status: active
 ---
 
-# Scope Discipline
+# scope discipline
 
 ## Source
 - Type: `local-file`
 - Path: `/opt/traderb-wiki/concepts/coding/scope-discipline.md`
-- Bytes: 5500
-- Updated: 2026-04-15T14:53:04.564Z
+- Bytes: 5556
+- Updated: 2026-04-15T22:48:06.126Z
 
 ## Content
 ````text
@@ -35,7 +35,7 @@ updatedAt: 2026-04-15
 
 ## Rule
 
-By the time a coder starts writing code, the tasks have already been defined via the task-kickoff flow, approved by the relevant enforcers, AND the git environment has been prepared per the CI/CD readiness step (Step 6.5 of [[concepts/process/task-kickoff-flow|task-kickoff-flow]] — Eitan gates trading-touching work; coders self-serve per standing policy otherwise). From that moment:
+By the time a coder starts writing code, the tasks have already been defined via the task-kickoff flow, approved by the relevant enforcers, AND the git environment has been prepared per the CI/CD readiness step (Step 6.5 of [[concepts/process/task-kickoff-flow|task-kickoff-flow]] — `devops` gates trading-touching work; coders self-serve per standing policy otherwise). From that moment:
 
 1. **The touch-area map is authoritative.** The map was declared in the task's DOD and approved by the enforcers. The coder codes inside it.
 2. **Only edit what you declared you would edit.**
@@ -51,8 +51,8 @@ Scope creep during coding is the top source of:
 - **Parity drift** — you modified a code path that affects both live and backtest.
 - **Hidden architectural debt** — you "just quickly fixed" a neighboring file instead of raising it as a separate task.
 - **Security incidents** — you introduced a data-exposure path no one reviewed.
-- **Compliance violations** — you tweaked broker-touching logic without Shira's sign-off.
-- **UI incoherence** — you shipped code whose visual result doesn't match Rotem's approved design.
+- **Compliance violations** — you tweaked broker-touching logic without `compliance-officer`'s sign-off.
+- **UI incoherence** — you shipped code whose visual result doesn't match `ux-designer`'s approved design.
 
 On a parity-critical trading bot, each of these is a money or credibility risk.
 
@@ -99,7 +99,7 @@ When mid-coding the coder discovers something outside the map that needs to chan
 
 ## Applies to
 
-- Implementer personas: Lior (python-dev), Maya (frontend-dev), Dan (data-engineer when writing pipeline code), Gal (when writing instrumentation code).
+- Implementer personas: `python-dev`, `frontend-dev`, `data-engineer` (data-engineer when writing pipeline code), `logging-specialist` (when writing instrumentation code).
 - The enforcers named in the task-kickoff flow remain the review authority at code-review time.
 
 ## Interaction with other canonical pages
@@ -112,7 +112,7 @@ When mid-coding the coder discovers something outside the map that needs to chan
 
 - Not a prohibition on refactoring. Refactoring is a first-class task — raise it as its own task, go through the task-kickoff flow.
 - Not a prohibition on finding better approaches mid-implementation. If a better approach needs a wider scope, stop → handoff → sanction → proceed. The rule is explicit sanction, not "never change your mind."
-- Not a veto system at code-review time. If an enforcer flags an unplanned change, the coder and enforcer align on the resolution; if they can't align, Ari escalates.
+- Not a veto system at code-review time. If an enforcer flags an unplanned change, the coder and enforcer align on the resolution; if they can't align, `project-lead` escalates.
 
 ````
 

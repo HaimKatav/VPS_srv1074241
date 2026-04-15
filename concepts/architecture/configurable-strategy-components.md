@@ -21,7 +21,7 @@ This is a first-class requirement, not an afterthought.
 - **A/B testing without redeploys.** Run strategy V3 with FVG on against strategy V3 with FVG off. Same code, two configs.
 - **Fast regression isolation.** A new release underperforms? Disable the component added last release, see if performance recovers. Root-cause in minutes, not sprints.
 - **Backtesting strategy combinations** against the same fixture days using different configs — pure, deterministic comparison.
-- **Haim + Noa tweak strategy directly** without waiting for Lior to push code. Config changes are reversible; code changes are not.
+- **Haim + `strategy-architect` tweak strategy directly** without waiting for `python-dev` to push code. Config changes are reversible; code changes are not.
 - **Every running configuration is captured** per `concepts/architecture/config-lineage.md` — so every trade can be traced back to the exact component mix that produced it.
 
 ## What this requires at implementation time
@@ -41,21 +41,21 @@ This is a first-class requirement, not an afterthought.
 
 ## Open design question (pending ADR)
 
-- **The exact representation of config** — nested JSON, YAML, Pydantic dataclass, envvar-first — is an architectural decision Idan + Noa produce an ADR for when implementation approaches. Principle stated here; mechanism TBD.
+- **The exact representation of config** — nested JSON, YAML, Pydantic dataclass, envvar-first — is an architectural decision `software-architect` + `strategy-architect` produce an ADR for when implementation approaches. Principle stated here; mechanism TBD.
 - Likely shape: Pydantic dataclass with JSON serialization for persistence. Human-editable via Observatory UI.
 
 ## Enforcement
 
-- **Idan reviews** every new strategy component at Step 6 (task-kickoff-flow): does it expose a toggle from day one? Is the toggle integrated into the signal engine's dispatch? Does it write a distinct config section?
-- **Noa owns the semantics** of each component — "when should this be on? what does 'off' mean for this component? is it required under what conditions?"
-- **Guy (qa-manager) frames QA** to include: the component works when enabled, the component is genuinely inert when disabled (no side-effects leaking into other components), the config persists + reloads correctly.
+- **`software-architect` reviews** every new strategy component at Step 6 (task-kickoff-flow): does it expose a toggle from day one? Is the toggle integrated into the signal engine's dispatch? Does it write a distinct config section?
+- **`strategy-architect` owns the semantics** of each component — "when should this be on? what does 'off' mean for this component? is it required under what conditions?"
+- **`qa-manager` frames QA** to include: the component works when enabled, the component is genuinely inert when disabled (no side-effects leaking into other components), the config persists + reloads correctly.
 
 ## Interaction with other canonical pages
 
 - [[concepts/architecture/config-lineage|config-lineage]] — toggles captured in the config snapshot; every trade knows which toggles were on
 - [[concepts/architecture/broker-portability|broker-portability]] — strategy components are broker-agnostic; toggles apply equally across brokers
 - [[concepts/ux/strategy-explainability|strategy-explainability]] — UI surfaces which components fired for a given trade (requires toggles to be visible)
-- [[sources/coordination-rules|coordination-rules]] — changes to trading-touching configuration pass through Omer (risk) + Shira (compliance) at step 2 of task-kickoff-flow
+- [[sources/coordination-rules|coordination-rules]] — changes to trading-touching configuration pass through `risk-manager` (risk) + `compliance-officer` (compliance) at step 2 of task-kickoff-flow
 
 ## Anti-patterns that violate this principle
 

@@ -10,7 +10,7 @@ updatedAt: 2026-04-15
 
 # Code Quality Principles
 
-> The baseline every line of code we ship must meet. Enforced by Idan (software-architect) at review time. Non-negotiable.
+> The baseline every line of code we ship must meet. Enforced by `software-architect` at review time. Non-negotiable.
 
 ## Readable and self-explanatory
 
@@ -40,7 +40,7 @@ updatedAt: 2026-04-15
 
 ## Testability by design
 
-- **Every new module arrives with its tests.** No exceptions. The tests are part of the task's DOD, authored by the coder, scoped by Guy.
+- **Every new module arrives with its tests.** No exceptions. The tests are part of the task's DOD, authored by the coder, scoped by `qa-manager`.
 - **If code resists unit testing, the architecture is wrong — not the test.** Refactor for testability, don't contort the test.
 - **Pure functions wherever possible** — easier to test, fewer surprises.
 
@@ -53,7 +53,7 @@ updatedAt: 2026-04-15
 ## Dependency discipline
 
 - **Prefer standard library over external packages.** Justify every third-party dependency in the PR.
-- **Every dependency has a security review** (Tamar enforces). New packages can't land without sign-off.
+- **Every dependency has a security review** (`security-specialist` enforces). New packages can't land without sign-off.
 - **Pin versions, pre-commit hooks verify.** No floating deps in trading code.
 
 ## Parity implications
@@ -63,9 +63,9 @@ updatedAt: 2026-04-15
 
 ## Enforcement
 
-- Idan (software-architect) reviews every non-trivial PR against these principles.
+- `software-architect` reviews every non-trivial PR against these principles.
 - `make test` + `make regression` must pass before merge to `develop`.
-- Ari (project-lead) gatekeeps the sprint-level DOD: code quality issues get blocked as architectural debt, not ignored.
+- `project-lead` gatekeeps the sprint-level DOD: code quality issues get blocked as architectural debt, not ignored.
 
 ## Related canonical pages
 
@@ -73,4 +73,4 @@ updatedAt: 2026-04-15
 - [[concepts/architecture/reusable-tools|reusable-tools]] — when to extract
 - [[concepts/architecture/broker-portability|broker-portability]] — the canonical protocol-seam example
 - [[concepts/architecture/configurable-strategy-components|configurable-strategy-components]] — runtime toggles without code changes
-- [[sources/coordination-rules|coordination-rules]] — enforcer matrix that puts Idan on every coding PR
+- [[sources/coordination-rules|coordination-rules]] — enforcer matrix that puts `software-architect` on every coding PR

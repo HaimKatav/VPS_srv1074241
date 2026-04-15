@@ -4,8 +4,8 @@ id: source.config-lineage
 title: config lineage
 sourceType: local-file
 sourcePath: /opt/traderb-wiki/concepts/architecture/config-lineage.md
-ingestedAt: 2026-04-15T20:54:36.701Z
-updatedAt: 2026-04-15T20:54:36.701Z
+ingestedAt: 2026-04-15T22:48:03.830Z
+updatedAt: 2026-04-15T22:48:03.830Z
 status: active
 ---
 
@@ -14,8 +14,8 @@ status: active
 ## Source
 - Type: `local-file`
 - Path: `/opt/traderb-wiki/concepts/architecture/config-lineage.md`
-- Bytes: 5582
-- Updated: 2026-04-15T20:54:36.701Z
+- Bytes: 5624
+- Updated: 2026-04-15T22:48:03.830Z
 
 ## Content
 ```text
@@ -56,11 +56,11 @@ No trade exists without a `config_hash`. No config was used without a snapshot.
 ### Config hash in every trade record
 - Every trade row in the run log has a `config_hash` field.
 - Every session start writes a session record with `config_hash` + timestamp + broker + mode (live / paper / replay).
-- Logs (per Gal's logging schema) include `config_hash` in every tick-level event for fast lookup.
+- Logs (per `logging-specialist`'s logging schema) include `config_hash` in every tick-level event for fast lookup.
 
 ### UI access
 - From a trade view in the Dashboard or Observatory, Haim can click into the config snapshot that produced the trade.
-- Config snapshots are diff-able against each other in the UI (Idan or Maya will own the diff tool at implementation time — see `concepts/architecture/reusable-tools.md`).
+- Config snapshots are diff-able against each other in the UI (`software-architect` or `frontend-dev` will own the diff tool at implementation time — see `concepts/architecture/reusable-tools.md`).
 
 ### Named config sets
 - Users can save configs with human-readable names (`strategy_v3_aggressive`, `baseline_noFVG`, `topstep_evaluation_setup`) that resolve to a specific hash.
@@ -75,11 +75,11 @@ No trade exists without a `config_hash`. No config was used without a snapshot.
 
 ## Enforcement
 
-- **Idan** reviews any change to config-reading or config-writing code — lineage contract must not be broken.
-- **Dan (data-engineer)** owns the storage format + retention policy for snapshots.
-- **Gal (logging-specialist)** ensures every logged event carries the `config_hash` context.
-- **Amit (transparency-agent)** ensures the UI surface actually exposes config-per-trade, not hidden behind a click-through.
-- **Guy (qa-manager)** frames QA that includes: "trade record without config_hash = automatic fail; config_hash without snapshot = automatic fail; snapshot modified post-run = automatic fail."
+- **`software-architect`** reviews any change to config-reading or config-writing code — lineage contract must not be broken.
+- **`data-engineer`** owns the storage format + retention policy for snapshots.
+- **`logging-specialist`** ensures every logged event carries the `config_hash` context.
+- **`transparency-agent`** ensures the UI surface actually exposes config-per-trade, not hidden behind a click-through.
+- **`qa-manager`** frames QA that includes: "trade record without config_hash = automatic fail; config_hash without snapshot = automatic fail; snapshot modified post-run = automatic fail."
 
 ## Anti-patterns that violate lineage
 
