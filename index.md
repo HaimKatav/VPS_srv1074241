@@ -3,9 +3,9 @@
 ## Generated
 <!-- openclaw:wiki:index:start -->
 - Render mode: `obsidian`
-- Total pages: 27
+- Total pages: 34
 - Claims: 0
-- Sources: 21
+- Sources: 28
 - Entities: 0
 - Concepts: 0
 - Syntheses: 0
@@ -16,12 +16,14 @@
 - [[sources/code-quality-principles|code quality principles]]
 - [[sources/config-lineage|config lineage]]
 - [[sources/configurable-strategy-components|configurable strategy components]]
-- [[sources/coordination-rules|Coordination Rules]]
-- [[sources/milestone-workflow|Milestone Workflow]]
+- [[sources/coordination-rules|coordination rules]]
+- [[sources/documentation-hygiene|documentation hygiene]]
+- [[sources/milestone-workflow|milestone workflow]]
 - [[sources/persona-adapt|Persona Adapt]]
 - [[sources/persona-add|Persona Add]]
-- [[sources/persona-lifecycle|Persona Lifecycle]]
+- [[sources/persona-lifecycle|persona lifecycle]]
 - [[sources/persona-remove|Persona Remove]]
+- [[sources/project-management-methodology|project management methodology]]
 - [[sources/reusable-tools|reusable tools]]
 - [[sources/runbook-adapt-a-persona|Runbook: Adapt a Persona]]
 - [[sources/runbook-add-a-persona|Runbook: Add a Persona]]
@@ -30,8 +32,13 @@
 - [[sources/scope-discipline|Scope Discipline]]
 - [[sources/scope-discipline-for-coding-tasks|Scope Discipline for Coding Tasks]]
 - [[sources/strategy-explainability|strategy explainability]]
-- [[sources/task-kickoff-flow|Task Kickoff Flow]]
+- [[sources/task-kickoff-flow|task kickoff flow]]
+- [[sources/teams-and-squads|teams and squads]]
+- [[sources/template|template]]
+- [[sources/role-briefs-research|TraderB Team Personas: Detailed Role Briefs]]
 - [[sources/traderb-team-roster|TraderB Team Roster]]
+- [[sources/trading-numbers-discipline|trading numbers discipline]]
+- [[sources/vocabulary-and-naming|vocabulary and naming]]
 - [[sources/wiki-information-architecture|Wiki Information Architecture]]
 
 ### Entities

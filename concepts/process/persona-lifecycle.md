@@ -181,6 +181,16 @@ All ingest steps refresh the source projections so agents querying via `wiki_sea
 
 During bootstrap seeding (Stage 1), Haim + admin directly execute lifecycle events. Idan's creation this session is the reference example — documented in the personas repo commit history. Post-Stage-1, Ari takes over execution.
 
+
+
+## PM logging
+
+Every persona lifecycle event is logged in the PM system as a task with category `lifecycle`. The task carries: event type (add/remove/adapt), persona affected, whose area-of-control was involved, links to all changed wiki pages. Per [[concepts/process/project-management-methodology|project-management-methodology]] §three-log pattern.
+
+## Area-of-control rule applies to persona changes too
+
+When a persona change is contested (should this role even exist? does it overlap with another?), Haim's area-of-control rule from [[concepts/meta/documentation-hygiene|documentation-hygiene]] §Rule 4 applies: the contested question is investigated through the lens of whose role ALREADY covers the scope, what research backs the gap, what the existing personas actually do vs don't. Haim judges.
+
 ## Related
 
 - [[sources/coordination-rules|coordination-rules]] — enforcer matrix that must stay in sync with roster

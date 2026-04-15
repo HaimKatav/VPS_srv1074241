@@ -1,21 +1,21 @@
 ---
 pageType: source
 id: source.persona-lifecycle
-title: Persona Lifecycle
+title: persona lifecycle
 sourceType: local-file
 sourcePath: /opt/traderb-wiki/concepts/process/persona-lifecycle.md
-ingestedAt: 2026-04-15T14:52:01.728Z
-updatedAt: 2026-04-15T14:52:01.728Z
+ingestedAt: 2026-04-15T22:45:11.283Z
+updatedAt: 2026-04-15T22:45:11.283Z
 status: active
 ---
 
-# Persona Lifecycle
+# persona lifecycle
 
 ## Source
 - Type: `local-file`
 - Path: `/opt/traderb-wiki/concepts/process/persona-lifecycle.md`
-- Bytes: 12779
-- Updated: 2026-04-15T14:52:01.728Z
+- Bytes: 13589
+- Updated: 2026-04-15T22:45:11.283Z
 
 ## Content
 ````text
@@ -201,6 +201,16 @@ All ingest steps refresh the source projections so agents querying via `wiki_sea
 ## Stage 1 caveat
 
 During bootstrap seeding (Stage 1), Haim + admin directly execute lifecycle events. Idan's creation this session is the reference example — documented in the personas repo commit history. Post-Stage-1, Ari takes over execution.
+
+
+
+## PM logging
+
+Every persona lifecycle event is logged in the PM system as a task with category `lifecycle`. The task carries: event type (add/remove/adapt), persona affected, whose area-of-control was involved, links to all changed wiki pages. Per [[concepts/process/project-management-methodology|project-management-methodology]] §three-log pattern.
+
+## Area-of-control rule applies to persona changes too
+
+When a persona change is contested (should this role even exist? does it overlap with another?), Haim's area-of-control rule from [[concepts/meta/documentation-hygiene|documentation-hygiene]] §Rule 4 applies: the contested question is investigated through the lens of whose role ALREADY covers the scope, what research backs the gap, what the existing personas actually do vs don't. Haim judges.
 
 ## Related
 

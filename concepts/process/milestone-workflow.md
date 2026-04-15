@@ -77,11 +77,13 @@ Relevant enforcers confirm their domain is clean before Ari closes:
 - Eitan — CI green, deployment ready
 
 ### 9. MILESTONE CLOSE-OUT
-Ari compiles the close-out summary: what shipped, what didnt, what was learned.
-- Writes a synthesis page to syntheses/milestones/<milestone-id>.md.
-- Haim reviews and accepts.
-- Close-out meeting record saved to openclaw/meetings/.
+`project-lead` compiles the close-out summary: what shipped, what didn't, what was learned.
+- Writes a synthesis page to `syntheses/milestones/<milestone-id>.md`.
+- **If the milestone is user-testable** (per [[concepts/process/project-management-methodology|project-management-methodology]] §Haim-testable milestones): Haim performs hands-on testing — not a rubber stamp, actual exercise of the surface with real data. `project-lead` does NOT close without this.
+- **If the milestone touches trading numbers** (per [[concepts/meta/trading-numbers-discipline|trading-numbers-discipline]]): Haim's hands-on validation includes checking produced numbers against independent expectations.
+- Close-out meeting record saved to `openclaw/meetings/`.
 - Retro: token usage, rework rate, stall patterns — feed into next sprint.
+- All associated tasks in the PM system transition to `done`; squad history archived.
 
 ## Phase gates summary
 

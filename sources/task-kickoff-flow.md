@@ -1,21 +1,21 @@
 ---
 pageType: source
 id: source.task-kickoff-flow
-title: Task Kickoff Flow
+title: task kickoff flow
 sourceType: local-file
 sourcePath: /opt/traderb-wiki/concepts/process/task-kickoff-flow.md
-ingestedAt: 2026-04-15T14:51:49.273Z
-updatedAt: 2026-04-15T14:51:49.273Z
+ingestedAt: 2026-04-15T22:44:43.256Z
+updatedAt: 2026-04-15T22:44:43.256Z
 status: active
 ---
 
-# Task Kickoff Flow
+# task kickoff flow
 
 ## Source
 - Type: `local-file`
 - Path: `/opt/traderb-wiki/concepts/process/task-kickoff-flow.md`
-- Bytes: 10820
-- Updated: 2026-04-15T14:51:49.273Z
+- Bytes: 11793
+- Updated: 2026-04-15T22:44:43.256Z
 
 ## Content
 ```text
@@ -48,7 +48,12 @@ Based on what the spec touches, Ari identifies which enforcers apply (see [[conc
 - `openclaw/handoffs/ari-to-qa-manager_<date>_<task-slug>.md` (always — Guy produces the QA frame)
 - Plus whichever of Rotem / Shira / Tamar / Omer / Dan / Gal are relevant
 
-The handoff includes: the approved spec, the scope hints Ari sees, the expected output from this enforcer.
+The handoff includes: the approved spec, the scope hints `project-lead` sees, the expected output from this enforcer.
+
+`project-lead` also:
+- Creates the task record in the PM system per [[concepts/process/project-management-methodology|project-management-methodology]] with category, squad, linked wiki pages, priority, DOD.
+- Applies the `trading-numbers` tag if the task touches any number subject to [[concepts/meta/trading-numbers-discipline|trading-numbers-discipline]] (most strategy, risk, compliance, broker, pricing, and P&L work).
+- Applies the `haim-sign-off-required` tag if the task will produce user-testable output at its milestone.
 
 ### Step 2 — Each enforcer produces a domain breakdown
 
@@ -58,6 +63,7 @@ Format of a domain breakdown (short handoff, ~30 lines):
 - **Domain concerns identified** (e.g. Tamar: "this adds a new outbound API call; secrets management + input validation required")
 - **Specific requirements** (e.g. Idan: "new adapter must implement `BrokerClient` protocol; tests go in brokers/tests/; no global state")
 - **Constraints / guardrails** (e.g. Omer: "bracket-order changes must keep max-contracts enforcement intact")
+- **Component touches** — list every `entities/components/<slug>` this task will create or update. If creating: include the canonical name (human + code identifier) as the starter for `project-lead` template instantiation. See [[entities/components/_template|components template]].
 - **Questions or unknowns** surfaced at this step — anything the enforcer can't decide alone
 
 The breakdown goes back to Ari via handoff: `openclaw/handoffs/<enforcer>-to-ari_<date>_<task-slug>_breakdown.md`.
@@ -90,6 +96,8 @@ Once alignment is achieved (or Haim has decided), Ari produces the unified task 
 - Any Haim decisions from the alignment step
 
 This is the authoritative brief the coder will work from.
+
+`project-lead` also creates/updates component entity pages per the component-touch lists, filling each role-owner's section from their breakdown.
 
 ### Step 5 — Coder creates their tasks
 

@@ -1,21 +1,21 @@
 ---
 pageType: source
 id: source.milestone-workflow
-title: Milestone Workflow
+title: milestone workflow
 sourceType: local-file
 sourcePath: /opt/traderb-wiki/concepts/process/milestone-workflow.md
-ingestedAt: 2026-04-15T14:54:31.656Z
-updatedAt: 2026-04-15T14:54:31.656Z
+ingestedAt: 2026-04-15T22:44:56.793Z
+updatedAt: 2026-04-15T22:44:56.793Z
 status: active
 ---
 
-# Milestone Workflow
+# milestone workflow
 
 ## Source
 - Type: `local-file`
 - Path: `/opt/traderb-wiki/concepts/process/milestone-workflow.md`
-- Bytes: 6267
-- Updated: 2026-04-15T14:54:31.656Z
+- Bytes: 6866
+- Updated: 2026-04-15T22:44:56.793Z
 
 ## Content
 ```text
@@ -98,11 +98,13 @@ Relevant enforcers confirm their domain is clean before Ari closes:
 - Eitan — CI green, deployment ready
 
 ### 9. MILESTONE CLOSE-OUT
-Ari compiles the close-out summary: what shipped, what didnt, what was learned.
-- Writes a synthesis page to syntheses/milestones/<milestone-id>.md.
-- Haim reviews and accepts.
-- Close-out meeting record saved to openclaw/meetings/.
+`project-lead` compiles the close-out summary: what shipped, what didn't, what was learned.
+- Writes a synthesis page to `syntheses/milestones/<milestone-id>.md`.
+- **If the milestone is user-testable** (per [[concepts/process/project-management-methodology|project-management-methodology]] §Haim-testable milestones): Haim performs hands-on testing — not a rubber stamp, actual exercise of the surface with real data. `project-lead` does NOT close without this.
+- **If the milestone touches trading numbers** (per [[concepts/meta/trading-numbers-discipline|trading-numbers-discipline]]): Haim's hands-on validation includes checking produced numbers against independent expectations.
+- Close-out meeting record saved to `openclaw/meetings/`.
 - Retro: token usage, rework rate, stall patterns — feed into next sprint.
+- All associated tasks in the PM system transition to `done`; squad history archived.
 
 ## Phase gates summary
 

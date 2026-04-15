@@ -1,21 +1,21 @@
 ---
 pageType: source
 id: source.coordination-rules
-title: Coordination Rules
+title: coordination rules
 sourceType: local-file
 sourcePath: /home/openclaw/.openclaw/workspaces/_shared/coordination-rules.md
-ingestedAt: 2026-04-15T14:09:52.924Z
-updatedAt: 2026-04-15T14:09:52.924Z
+ingestedAt: 2026-04-15T22:45:23.972Z
+updatedAt: 2026-04-15T22:45:23.972Z
 status: active
 ---
 
-# Coordination Rules
+# coordination rules
 
 ## Source
 - Type: `local-file`
 - Path: `/home/openclaw/.openclaw/workspaces/_shared/coordination-rules.md`
-- Bytes: 8899
-- Updated: 2026-04-15T14:09:52.924Z
+- Bytes: 9718
+- Updated: 2026-04-15T22:45:23.972Z
 
 ## Content
 ```text
@@ -26,6 +26,21 @@ status: active
 ## Principle: stay lean, route when out of lane
 
 Each persona does their narrow thing well. When a problem is outside your specialty, you ROUTE — do not guess. Routing up, down, or sideways is cheaper and better than bad answers.
+
+
+## Human verification is non-negotiable
+
+This project exists for humans to view, verify, and trust. Every doc, decision, and output is oriented for human verification. When in doubt, err toward making the artifact more inspectable, more legible, more cite-able to a human reader — never less. See [[concepts/meta/documentation-hygiene|documentation-hygiene]] §project mentality for the full framing.
+
+## Trading numbers — the short escalation path
+
+When any stage detects a discrepancy in a trading number (per [[concepts/meta/trading-numbers-discipline|trading-numbers-discipline]]):
+- Skip the normal 3-try peer loop.
+- Halt the task.
+- `project-lead` immediately escalates to Haim with the full stage-by-stage case.
+- Haim judges.
+
+Numbers that touch money are P0 by definition. We don't iterate in the open.
 
 ## The escalation ladder (universal)
 
@@ -178,16 +193,20 @@ Agents may read lower-confidence pages for context but **must not cite** inferre
 
 - [[sources/code-quality-principles|code quality principles]]
 - [[sources/configurable-strategy-components|configurable strategy components]]
-- [[sources/milestone-workflow|Milestone Workflow]]
+- [[sources/documentation-hygiene|documentation hygiene]]
+- [[sources/milestone-workflow|milestone workflow]]
 - [[sources/persona-adapt|Persona Adapt]]
 - [[sources/persona-add|Persona Add]]
-- [[sources/persona-lifecycle|Persona Lifecycle]]
+- [[sources/persona-lifecycle|persona lifecycle]]
 - [[sources/persona-remove|Persona Remove]]
+- [[sources/project-management-methodology|project management methodology]]
 - [[sources/runbook-adapt-a-persona|Runbook: Adapt a Persona]]
 - [[sources/runbook-remove-a-persona|Runbook: Remove a Persona]]
 - [[sources/scope-discipline|Scope Discipline]]
 - [[sources/scope-discipline-for-coding-tasks|Scope Discipline for Coding Tasks]]
 - [[sources/strategy-explainability|strategy explainability]]
-- [[sources/task-kickoff-flow|Task Kickoff Flow]]
+- [[sources/task-kickoff-flow|task kickoff flow]]
+- [[sources/teams-and-squads|teams and squads]]
 - [[sources/traderb-team-roster|TraderB Team Roster]]
+- [[sources/trading-numbers-discipline|trading numbers discipline]]
 <!-- openclaw:wiki:related:end -->
