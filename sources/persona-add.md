@@ -1,4 +1,25 @@
 ---
+pageType: source
+id: source.persona-add
+title: Persona Add
+sourceType: local-file
+sourcePath: /opt/traderb-wiki/concepts/process/runbooks/persona-add.md
+ingestedAt: 2026-04-15T14:52:26.924Z
+updatedAt: 2026-04-15T14:52:26.924Z
+status: active
+---
+
+# Persona Add
+
+## Source
+- Type: `local-file`
+- Path: `/opt/traderb-wiki/concepts/process/runbooks/persona-add.md`
+- Bytes: 10640
+- Updated: 2026-04-15T14:52:26.924Z
+
+## Content
+````text
+---
 pageType: concept
 id: concept.process.runbooks.persona-add
 title: Runbook — Add a New Persona
@@ -248,3 +269,14 @@ grep -rln '<agent-id>\|<Name>' /opt/traderb /home/openclaw/.openclaw/workspaces 
 ```
 
 For every file the command lists, confirm the persona's reference is correct. Any file not already in your cascading batch is a gap — update it in the same commit.
+
+````
+
+## Notes
+<!-- openclaw:human:start -->
+<!-- openclaw:human:end -->
+
+## Related
+<!-- openclaw:wiki:related:start -->
+- No related pages yet.
+<!-- openclaw:wiki:related:end -->

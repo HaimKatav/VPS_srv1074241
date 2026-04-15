@@ -26,7 +26,7 @@ Policy changes rarely. Runbooks change when the underlying tooling changes.
 - `persona-remove.md` — retire a persona (reassign in-flight work, archive workspace, full doc chain, rollback)
 - `persona-adapt.md` — update an existing persona's SOUL / AGENTS / relationships (both material and minor paths)
 
-Policy home: `concepts/process/persona-lifecycle.md`
+Policy home: [[concepts/process/persona-lifecycle|persona-lifecycle]]
 
 ### (Future runbooks expected as the team grows)
 - `add-new-skill.md` — install and enable a ClawHub skill
@@ -67,10 +67,10 @@ Keep each runbook under ~200 lines if possible. If a runbook naturally exceeds t
 
 ## Related
 
-- `concepts/process/persona-lifecycle.md` — the policy powering the persona runbooks above
-- `concepts/process/milestone-workflow.md` — the broader process context
-- `concepts/process/task-kickoff-flow.md` — how tasks get defined
-- `_shared/coordination-rules.md` — enforcer matrix + escalation ladder + QA capacity
+- [[concepts/process/persona-lifecycle|persona-lifecycle]] — the policy powering the persona runbooks above
+- [[concepts/process/milestone-workflow|milestone-workflow]] — the broader process context
+- [[concepts/process/task-kickoff-flow|task-kickoff-flow]] — how tasks get defined
+- [[sources/coordination-rules|coordination-rules]] — enforcer matrix + escalation ladder + QA capacity
 
 ## Notes
 

@@ -22,7 +22,7 @@ This page defines how that translation happens. It puts the **domain experts** i
 
 ### Step 1 — Ari distributes the approved spec to relevant enforcers
 
-Based on what the spec touches, Ari identifies which enforcers apply (see `concepts/coding/scope-discipline.md` §Enforcers required by domain) and distributes via individual handoffs:
+Based on what the spec touches, Ari identifies which enforcers apply (see [[concepts/coding/scope-discipline|scope-discipline]] §Enforcers required by domain) and distributes via individual handoffs:
 - `openclaw/handoffs/ari-to-idan_<date>_<task-slug>.md` (always)
 - `openclaw/handoffs/ari-to-qa-manager_<date>_<task-slug>.md` (always — Guy produces the QA frame)
 - Plus whichever of Rotem / Shira / Tamar / Omer / Dan / Gal are relevant
@@ -74,7 +74,7 @@ This is the authoritative brief the coder will work from.
 
 The coder (Lior, Maya, Dan, or Gal depending on the work) translates the brief into concrete tasks on the project board. For each task:
 - Title + DOD
-- Touch-area map (per `concepts/coding/scope-discipline.md`)
+- Touch-area map (per [[concepts/coding/scope-discipline|scope-discipline]])
 - Tests to add
 - Dependencies / ordering
 
@@ -119,7 +119,7 @@ After all enforcers have approved the task list and BEFORE any code is written, 
 - CI armed on the new branch
 - For gate model: no conflict with other in-flight branches touching the same files
 
-**Only after this step** — coding begins. Scope discipline (see `concepts/coding/scope-discipline.md`) applies from that moment.
+**Only after this step** — coding begins. Scope discipline (see [[concepts/coding/scope-discipline|scope-discipline]]) applies from that moment.
 
 **Escalation:** if Eitan identifies a git/CI issue that would block the task (merge conflict in base, CI needing a new stage, etc.), he handles it directly and coordinates with Ari on sprint timing. If a coder on the policy-model path can't follow the standing policy, they handoff to Eitan for assistance per the escalation ladder.
 
@@ -159,9 +159,9 @@ Trivial tasks — a typo fix, a comment edit, a single-line bug fix with an obvi
 
 ## Interaction with other canonical pages
 
-- `concepts/process/milestone-workflow.md` — this page is the zoom-in on step 6 (between spec approved and implementation). Milestone-workflow describes phases; this page describes the kickoff inside the implementation phase.
-- `concepts/coding/scope-discipline.md` — once this flow completes and the coder has approved tasks, scope-discipline governs the coding itself.
-- `_shared/coordination-rules.md` — the enforcer matrix names WHO reviews what; the escalation ladder defines the try-count rules used in Steps 3 and 6; the bootstrap-vs-steady-state clause explains why this flow isn't yet in full effect during Stage 1.
+- [[concepts/process/milestone-workflow|milestone-workflow]] — this page is the zoom-in on step 6 (between spec approved and implementation). Milestone-workflow describes phases; this page describes the kickoff inside the implementation phase.
+- [[concepts/coding/scope-discipline|scope-discipline]] — once this flow completes and the coder has approved tasks, scope-discipline governs the coding itself.
+- [[sources/coordination-rules|coordination-rules]] — the enforcer matrix names WHO reviews what; the escalation ladder defines the try-count rules used in Steps 3 and 6; the bootstrap-vs-steady-state clause explains why this flow isn't yet in full effect during Stage 1.
 
 ## Not yet in effect
 

@@ -10,7 +10,7 @@ updatedAt: 2026-04-15
 
 # Runbook: Remove a Persona
 
-> Executable checklist for retiring a persona. Paired with `concepts/process/persona-lifecycle.md` (the policy).
+> Executable checklist for retiring a persona. Paired with [[concepts/process/persona-lifecycle|persona-lifecycle]] (the policy).
 
 ## Prerequisites (gate — do not start without)
 
@@ -71,13 +71,13 @@ Per docs: workspace, agent state, and session transcript directories are moved t
 
 Edit `/opt/traderb/SOUL.md`. Remove the persona's row from the Routing Table. Optionally, add an "absorbed by" note in the commit message (not in the routing table — that just gets noisy over time).
 
-### 6. Update `_shared/coordination-rules.md` enforcer matrix
+### 6. Update [[sources/coordination-rules|coordination-rules]] enforcer matrix
 
 Edit the enforcer matrix:
 - Remove the persona's own row
 - For every other persona whose enforcer relationships named this persona, update those rows to point to the absorbing persona instead
 
-### 7. Update `entities/team/index.md` roster
+### 7. Update [[entities/team/index|team roster]] roster
 
 Edit the main roster table — **move the row to an "Archived personas" section at the bottom** (do not just delete; keep for history).
 
@@ -184,16 +184,16 @@ Or restore from system trash if the archive somehow got skipped.
 
 ## References
 
-- Policy: `concepts/process/persona-lifecycle.md`
+- Policy: [[concepts/process/persona-lifecycle|persona-lifecycle]]
 - OpenClaw docs: https://docs.openclaw.ai/cli/agents
-- Related: `concepts/process/runbooks/persona-add.md`, `concepts/process/runbooks/persona-adapt.md`
+- Related: [[concepts/process/runbooks/persona-add|persona-add runbook]], [[concepts/process/runbooks/persona-adapt|persona-adapt runbook]]
 
 ## Cascading review batch (mandatory)
 
-Per `concepts/process/persona-lifecycle.md` §Cascading review rule, removal produces a single review batch BEFORE execution, covering:
+Per [[concepts/process/persona-lifecycle|persona-lifecycle]] §Cascading review rule, removal produces a single review batch BEFORE execution, covering:
 
-- Updated rows/removals in `_shared/coordination-rules.md` enforcer matrix (every row that references the departing persona)
-- Updated `entities/team/index.md` — move persona row to "Archived" section; update compressed enforcer table
+- Updated rows/removals in [[sources/coordination-rules|coordination-rules]] enforcer matrix (every row that references the departing persona)
+- Updated [[entities/team/index|team roster]] — move persona row to "Archived" section; update compressed enforcer table
 - Updated `/opt/traderb/SOUL.md` routing table (remove row)
 - Updated `openclaw/SKILLS_REGISTRY.md` (remove section OR move to archive)
 - Updated `openclaw/GOVERNANCE.md` review chain (reassign any reviewer role)

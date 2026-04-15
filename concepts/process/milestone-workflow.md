@@ -96,9 +96,9 @@ Ari compiles the close-out summary: what shipped, what didnt, what was learned.
 
 ## Interaction with other canonical pages
 
-- _shared/coordination-rules.md — escalation ladder, enforcer matrix, QA bug loop. This page uses those mechanics; does not redefine them.
-- concepts/coding/scope-discipline.md — referenced in step 6 for the touch-area mapping rule. Canonical for coding scope.
-- concepts/meta/wiki-information-architecture.md — governs where research/spec pages land (concepts vs syntheses vs entities).
+- [[sources/coordination-rules|coordination-rules]] — escalation ladder, enforcer matrix, QA bug loop. This page uses those mechanics; does not redefine them.
+- [[concepts/coding/scope-discipline|scope-discipline]] — referenced in step 6 for the touch-area mapping rule. Canonical for coding scope.
+- [[concepts/meta/wiki-information-architecture|wiki-information-architecture]] — governs where research/spec pages land (concepts vs syntheses vs entities).
 - /opt/traderb/openclaw/GOVERNANCE.md — higher-level governance (DOD rules, review chain, persona roles). This page is the procedural spine; GOVERNANCE.md is the policy layer.
 
 ## Early-cycle caveat

@@ -12,7 +12,7 @@ updatedAt: 2026-04-15
 
 > Canonical directory of all agent personas on the TraderB team. When any persona needs to address another persona, find them here. Single source of truth — do not duplicate this list elsewhere.
 
-Team size and composition may change. Update this page when personas are added, renamed, or removed. The full enforcer matrix (who reviews what by aspect) lives in `_shared/coordination-rules.md` — this page is just the roster and primary relationships.
+Team size and composition may change. Update this page when personas are added, renamed, or removed. The full enforcer matrix (who reviews what by aspect) lives in [[sources/coordination-rules|coordination-rules]] — this page is just the roster and primary relationships.
 
 ## The crew (16 agents)
 
@@ -37,7 +37,7 @@ Team size and composition may change. Update this page when personas are added, 
 
 ## Primary enforcer relationships (quick lookup)
 
-The full matrix is in `_shared/coordination-rules.md`. This table is the compressed version — answers "if I need approval from someone, who?"
+The full matrix is in [[sources/coordination-rules|coordination-rules]]. This table is the compressed version — answers "if I need approval from someone, who?"
 
 | You are… | Your architecture enforcer | Your domain enforcer(s) | Your QA | Your process gate |
 |---|---|---|---|---|
@@ -60,18 +60,18 @@ The full matrix is in `_shared/coordination-rules.md`. This table is the compres
 
 ## The CEO
 
-Haim (the human) is not a persona — he is the source of truth. Every `approved-by-haim: true` tag in the wiki traces to his explicit sign-off. He escalates into the flow only at rung 4 of the escalation ladder (per `_shared/coordination-rules.md`) or when a net-new question is surfaced.
+Haim (the human) is not a persona — he is the source of truth. Every `approved-by-haim: true` tag in the wiki traces to his explicit sign-off. He escalates into the flow only at rung 4 of the escalation ladder (per [[sources/coordination-rules|coordination-rules]]) or when a net-new question is surfaced.
 
 ## Rules about this page
 
 - Only Ari (Librarian, post-Stage-1) updates this page unprompted.
-- When adding a new persona: update this page **first**, then update `main`'s SOUL routing table, then update `_shared/coordination-rules.md` enforcer matrix if the persona affects any existing relationship.
+- When adding a new persona: update this page **first**, then update `main`'s SOUL routing table, then update [[sources/coordination-rules|coordination-rules]] enforcer matrix if the persona affects any existing relationship.
 - When a persona's role changes materially: update this page **and** the relevant `AGENTS.md` in the same commit. Coherence is non-negotiable.
 - Trivial edits (typo in a one-liner, emoji change) don't require the full protocol — Ari's judgment.
 
 ## Related
 
-- `_shared/coordination-rules.md` — full enforcer matrix + escalation ladder + QA bug loop
-- `concepts/process/milestone-workflow.md` — how milestones move through the team
-- `concepts/process/task-kickoff-flow.md` — how tasks get defined and flow to coders
+- [[sources/coordination-rules|coordination-rules]] — full enforcer matrix + escalation ladder + QA bug loop
+- [[concepts/process/milestone-workflow|milestone-workflow]] — how milestones move through the team
+- [[concepts/process/task-kickoff-flow|task-kickoff-flow]] — how tasks get defined and flow to coders
 - Each persona's workspace: `/home/openclaw/.openclaw/workspaces/<agent-id>/` (SOUL.md, IDENTITY.md, AGENTS.md)

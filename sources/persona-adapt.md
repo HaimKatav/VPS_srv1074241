@@ -1,4 +1,25 @@
 ---
+pageType: source
+id: source.persona-adapt
+title: Persona Adapt
+sourceType: local-file
+sourcePath: /opt/traderb-wiki/concepts/process/runbooks/persona-adapt.md
+ingestedAt: 2026-04-15T14:52:51.534Z
+updatedAt: 2026-04-15T14:52:51.534Z
+status: active
+---
+
+# Persona Adapt
+
+## Source
+- Type: `local-file`
+- Path: `/opt/traderb-wiki/concepts/process/runbooks/persona-adapt.md`
+- Bytes: 9265
+- Updated: 2026-04-15T14:52:51.534Z
+
+## Content
+````text
+---
 pageType: concept
 id: concept.process.runbooks.persona-adapt
 title: Runbook — Adapt an Existing Persona
@@ -226,3 +247,14 @@ grep -rln '<agent-id>\|<Name>' /opt/traderb /home/openclaw/.openclaw/workspaces 
 ```
 
 Verify every match is consistent with the adapted role. Stale references elsewhere mean the adapt is incomplete.
+
+````
+
+## Notes
+<!-- openclaw:human:start -->
+<!-- openclaw:human:end -->
+
+## Related
+<!-- openclaw:wiki:related:start -->
+- No related pages yet.
+<!-- openclaw:wiki:related:end -->

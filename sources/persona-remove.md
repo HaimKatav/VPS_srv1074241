@@ -1,21 +1,21 @@
 ---
 pageType: source
-id: source.runbook-remove-a-persona
-title: "Runbook: Remove a Persona"
+id: source.persona-remove
+title: Persona Remove
 sourceType: local-file
 sourcePath: /opt/traderb-wiki/concepts/process/runbooks/persona-remove.md
-ingestedAt: 2026-04-15T14:53:39.046Z
-updatedAt: 2026-04-15T14:53:39.046Z
+ingestedAt: 2026-04-15T14:52:39.307Z
+updatedAt: 2026-04-15T14:52:39.307Z
 status: active
 ---
 
-# Runbook: Remove a Persona
+# Persona Remove
 
 ## Source
 - Type: `local-file`
 - Path: `/opt/traderb-wiki/concepts/process/runbooks/persona-remove.md`
 - Bytes: 9047
-- Updated: 2026-04-15T14:53:39.046Z
+- Updated: 2026-04-15T14:52:39.307Z
 
 ## Content
 ````text

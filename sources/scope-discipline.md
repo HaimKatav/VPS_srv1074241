@@ -1,4 +1,25 @@
 ---
+pageType: source
+id: source.scope-discipline
+title: Scope Discipline
+sourceType: local-file
+sourcePath: /opt/traderb-wiki/concepts/coding/scope-discipline.md
+ingestedAt: 2026-04-15T14:53:04.564Z
+updatedAt: 2026-04-15T14:53:04.564Z
+status: active
+---
+
+# Scope Discipline
+
+## Source
+- Type: `local-file`
+- Path: `/opt/traderb-wiki/concepts/coding/scope-discipline.md`
+- Bytes: 5500
+- Updated: 2026-04-15T14:53:04.564Z
+
+## Content
+````text
+---
 pageType: concept
 id: concept.coding.scope-discipline
 title: Scope Discipline for Coding Tasks
@@ -92,3 +113,14 @@ When mid-coding the coder discovers something outside the map that needs to chan
 - Not a prohibition on refactoring. Refactoring is a first-class task — raise it as its own task, go through the task-kickoff flow.
 - Not a prohibition on finding better approaches mid-implementation. If a better approach needs a wider scope, stop → handoff → sanction → proceed. The rule is explicit sanction, not "never change your mind."
 - Not a veto system at code-review time. If an enforcer flags an unplanned change, the coder and enforcer align on the resolution; if they can't align, Ari escalates.
+
+````
+
+## Notes
+<!-- openclaw:human:start -->
+<!-- openclaw:human:end -->
+
+## Related
+<!-- openclaw:wiki:related:start -->
+- No related pages yet.
+<!-- openclaw:wiki:related:end -->

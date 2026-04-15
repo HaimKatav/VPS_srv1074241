@@ -4,8 +4,8 @@ id: source.persona-lifecycle
 title: Persona Lifecycle
 sourceType: local-file
 sourcePath: /opt/traderb-wiki/concepts/process/persona-lifecycle.md
-ingestedAt: 2026-04-15T14:03:51.526Z
-updatedAt: 2026-04-15T14:03:51.526Z
+ingestedAt: 2026-04-15T14:52:01.728Z
+updatedAt: 2026-04-15T14:52:01.728Z
 status: active
 ---
 
@@ -14,8 +14,8 @@ status: active
 ## Source
 - Type: `local-file`
 - Path: `/opt/traderb-wiki/concepts/process/persona-lifecycle.md`
-- Bytes: 12541
-- Updated: 2026-04-15T14:03:51.526Z
+- Bytes: 12779
+- Updated: 2026-04-15T14:52:01.728Z
 
 ## Content
 ````text
@@ -59,12 +59,12 @@ The team is not static. New roles emerge as scope grows (e.g. Idan was added whe
    - Verify: `openclaw agents list` shows the new persona
 6. **Doc-update chain (in order, single commit):**
    - Update `main`'s SOUL routing table (new row pointing to the new agent)
-   - Update `_shared/coordination-rules.md` enforcer matrix (new persona's row + any relationships that shift elsewhere)
-   - Update `entities/team/index.md` roster (new row)
+   - Update [[sources/coordination-rules|coordination-rules]] enforcer matrix (new persona's row + any relationships that shift elsewhere)
+   - Update [[entities/team/index|team roster]] roster (new row)
    - Update any existing `AGENTS.md` whose enforcer relationships now include the new persona
 7. **Commit + push:**
    - Personas repo (`HaimKatav/traderb-personas`): all SOUL/AGENTS/IDENTITY changes
-   - Wiki repo (`HaimKatav/VPS_srv1074241`): updated `coordination-rules.md` + `entities/team/index.md` (re-ingested as sources)
+   - Wiki repo (`HaimKatav/VPS_srv1074241`): updated `coordination-rules.md` + [[entities/team/index|team roster]] (re-ingested as sources)
 8. **Smoke test:** Ari spawns the new persona for a trivial task to confirm they come online, read their AGENTS.md, query the wiki, and respond sensibly.
 
 ### 2. Removing a persona
@@ -82,8 +82,8 @@ The team is not static. New roles emerge as scope grows (e.g. Idan was added whe
 6. **Execute via OpenClaw CLI:** `openclaw agents delete <agent-id>` (removes routing + state; workspace already archived).
 7. **Doc-update chain (in order, single commit):**
    - Update `main`'s SOUL routing table (remove row; update any "absorbed-by" notes if relevant)
-   - Update `_shared/coordination-rules.md` enforcer matrix (remove row + reassign any relationships the persona was in)
-   - Update `entities/team/index.md` (move to an "Archived" section at bottom — keep for history, annotate with date + absorbed-by)
+   - Update [[sources/coordination-rules|coordination-rules]] enforcer matrix (remove row + reassign any relationships the persona was in)
+   - Update [[entities/team/index|team roster]] (move to an "Archived" section at bottom — keep for history, annotate with date + absorbed-by)
    - Update any existing `AGENTS.md` whose enforcer relationships referenced the removed persona
 8. **Commit + push** personas repo + wiki repo.
 9. **Milestone-close entry** in `syntheses/meta/` or similar noting the retirement, what was absorbed where, why.
@@ -107,8 +107,8 @@ The team is not static. New roles emerge as scope grows (e.g. Idan was added whe
    - Write new `SOUL.md` and/or `AGENTS.md` in the persona's workspace
    - If IDENTITY changed, run `openclaw agents set-identity --agent <agent-id> --from-identity`
 5. **Doc-update chain (single commit):**
-   - If enforcer relationships shifted: update `_shared/coordination-rules.md`
-   - If role description changed: update `entities/team/index.md`
+   - If enforcer relationships shifted: update [[sources/coordination-rules|coordination-rules]]
+   - If role description changed: update [[entities/team/index|team roster]]
    - If the shift affects other personas' enforcer relationships: update their `AGENTS.md` too
 6. **Commit + push** personas + wiki.
 
@@ -133,13 +133,13 @@ Approving a persona's SOUL without simultaneously reviewing the ripple updates (
 For EVERY add / remove / material-adapt event, the drafter produces a single review batch containing:
 
 1. The persona's own files — IDENTITY.md, SOUL.md, AGENTS.md (for add; edits of existing for adapt; empty/archive metadata for remove).
-2. `_shared/coordination-rules.md` — enforcer matrix updates.
-3. `entities/team/index.md` — roster update.
+2. [[sources/coordination-rules|coordination-rules]] — enforcer matrix updates.
+3. [[entities/team/index|team roster]] — roster update.
 4. `/opt/traderb/SOUL.md` — main router routing table.
 5. `openclaw/SKILLS_REGISTRY.md` — new/edited persona section.
 6. `openclaw/GOVERNANCE.md` — review chain table, if the persona is a reviewer.
 7. Any existing persona's `AGENTS.md` whose enforcer relationships shift — one or more files.
-8. Any process page that names specific enforcers — `concepts/process/task-kickoff-flow.md`, `concepts/process/milestone-workflow.md`, scope-discipline.md — if the persona's role changes those flows.
+8. Any process page that names specific enforcers — [[concepts/process/task-kickoff-flow|task-kickoff-flow]], [[concepts/process/milestone-workflow|milestone-workflow]], scope-discipline.md — if the persona's role changes those flows.
 9. `observatory.py` static roster dict — add/remove/update the persona entry; update comment if deprecating a referenced file.
 10. Any active handoffs that must be reassigned (remove event only).
 
@@ -204,10 +204,10 @@ During bootstrap seeding (Stage 1), Haim + admin directly execute lifecycle even
 
 ## Related
 
-- `_shared/coordination-rules.md` — enforcer matrix that must stay in sync with roster
-- `entities/team/index.md` — the canonical roster that must stay in sync with reality
-- `concepts/meta/wiki-information-architecture.md` — where page types live
-- `concepts/process/milestone-workflow.md` — how tasks flow (this page is its team-composition counterpart)
+- [[sources/coordination-rules|coordination-rules]] — enforcer matrix that must stay in sync with roster
+- [[entities/team/index|team roster]] — the canonical roster that must stay in sync with reality
+- [[concepts/meta/wiki-information-architecture|wiki-information-architecture]] — where page types live
+- [[concepts/process/milestone-workflow|milestone-workflow]] — how tasks flow (this page is its team-composition counterpart)
 
 ## What this prevents
 
