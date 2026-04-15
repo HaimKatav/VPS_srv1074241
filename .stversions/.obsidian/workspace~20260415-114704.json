@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "inbox.md",
+                "file": "entities/infra/index.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "inbox"
+              "title": "index"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "inbox.md",
+                "file": "entities/infra/index.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for inbox"
+              "title": "Backlinks for index"
             }
           },
           {
@@ -113,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "inbox.md",
+                "file": "entities/infra/index.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from inbox"
+              "title": "Outgoing links from index"
             }
           },
           {
@@ -156,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "inbox.md",
+                "file": "entities/infra/index.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of inbox"
+              "title": "Outline of index"
             }
           }
         ]
@@ -183,22 +183,31 @@
       "bases:Create new base": false
     }
   },
-  "active": "d711777957a17a1e",
+  "active": "13140d525f5f536e",
   "lastOpenFiles": [
+    "sources/milestone-workflow.md",
+    "concepts/process/milestone-workflow.md",
+    "concepts/process",
+    "concepts/_test/empirical-probe.md",
+    "concepts/_test",
+    "entities/index.md",
+    "entities/services/index.md",
     "sources/index.md",
+    "sources/coordination-rules.md",
+    "syntheses/journal/index.md",
     "sources/wiki-information-architecture.md",
+    "AGENTS.md",
+    "concepts/meta/wiki-information-architecture.md",
+    "inbox.md",
     "reports/lint.md",
     "syntheses/ux/index.md",
     "concepts/architecture/index.md",
     "concepts/coding/index.md",
     "entities/infra/index.md",
-    "syntheses/journal/index.md",
     "syntheses/projects/index.md",
-    "entities/services/index.md",
     "syntheses/postmortems/index.md",
     "concepts/meta/index.md",
     "entities/projects/index.md",
-    "concepts/meta/wiki-information-architecture.md",
     "concepts/ux/index.md",
     "syntheses/milestones/index.md",
     "concepts/ux",
@@ -209,17 +218,8 @@
     "syntheses/journal",
     "sources/bridge",
     "syntheses/milestones",
-    "syntheses/ux",
-    "entities/projects",
     "reports/contradictions.md",
     "index.md",
-    "WIKI.md",
-    "TraderB_Wiki_Plan.md",
-    "inbox.md",
-    "AGENTS.md",
-    "syntheses/index.md",
-    "reports/stale-pages.md",
-    "reports/open-questions.md",
-    "reports/low-confidence.md"
+    "WIKI.md"
   ]
 }

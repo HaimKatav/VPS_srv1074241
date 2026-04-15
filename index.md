@@ -3,9 +3,9 @@
 ## Generated
 <!-- openclaw:wiki:index:start -->
 - Render mode: `obsidian`
-- Total pages: 8
+- Total pages: 11
 - Claims: 0
-- Sources: 2
+- Sources: 5
 - Entities: 0
 - Concepts: 0
 - Syntheses: 0
@@ -13,6 +13,9 @@
 
 ### Sources
 - [[sources/coordination-rules|Coordination Rules]]
+- [[sources/milestone-workflow|Milestone Workflow]]
+- [[sources/scope-discipline-for-coding-tasks|Scope Discipline for Coding Tasks]]
+- [[sources/task-kickoff-flow|Task Kickoff Flow]]
 - [[sources/wiki-information-architecture|Wiki Information Architecture]]
 
 ### Entities
