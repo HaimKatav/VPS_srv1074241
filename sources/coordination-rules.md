@@ -4,8 +4,8 @@ id: source.coordination-rules
 title: Coordination Rules
 sourceType: local-file
 sourcePath: /home/openclaw/.openclaw/workspaces/_shared/coordination-rules.md
-ingestedAt: 2026-04-15T12:51:19.246Z
-updatedAt: 2026-04-15T12:51:19.246Z
+ingestedAt: 2026-04-15T14:04:42.045Z
+updatedAt: 2026-04-15T14:04:42.045Z
 status: active
 ---
 
@@ -15,7 +15,7 @@ status: active
 - Type: `local-file`
 - Path: `/home/openclaw/.openclaw/workspaces/_shared/coordination-rules.md`
 - Bytes: 8684
-- Updated: 2026-04-15T12:51:19.246Z
+- Updated: 2026-04-15T14:04:42.045Z
 
 ## Content
 ```text

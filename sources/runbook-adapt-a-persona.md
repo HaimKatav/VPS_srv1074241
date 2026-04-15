@@ -4,8 +4,8 @@ id: source.runbook-adapt-a-persona
 title: "Runbook: Adapt a Persona"
 sourceType: local-file
 sourcePath: /opt/traderb-wiki/concepts/process/runbooks/persona-adapt.md
-ingestedAt: 2026-04-15T13:03:28.005Z
-updatedAt: 2026-04-15T13:03:28.005Z
+ingestedAt: 2026-04-15T14:04:29.624Z
+updatedAt: 2026-04-15T14:04:29.624Z
 status: active
 ---
 
@@ -14,8 +14,8 @@ status: active
 ## Source
 - Type: `local-file`
 - Path: `/opt/traderb-wiki/concepts/process/runbooks/persona-adapt.md`
-- Bytes: 7766
-- Updated: 2026-04-15T13:03:28.005Z
+- Bytes: 9064
+- Updated: 2026-04-15T14:04:29.624Z
 
 ## Content
 ````text
@@ -224,6 +224,29 @@ This reclassification is normal — err on the side of caution.
 - Policy: `concepts/process/persona-lifecycle.md`
 - Related runbooks: `concepts/process/runbooks/persona-add.md`, `concepts/process/runbooks/persona-remove.md`
 - OpenClaw docs: https://docs.openclaw.ai/cli/agents
+
+## Cascading review batch (mandatory for material changes)
+
+Per `concepts/process/persona-lifecycle.md` §Cascading review rule, material-adapt events produce a single review batch BEFORE execution. Minor edits are exempt from batch review but still commit atomically.
+
+Material-adapt batch covers (as applicable to what's changing):
+
+- Updated `_shared/coordination-rules.md` enforcer matrix (if relationships shift)
+- Updated `entities/team/index.md` (if role description or relationships change)
+- Updated `/opt/traderb/SOUL.md` routing table (if the domain one-liner changes)
+- Updated `openclaw/SKILLS_REGISTRY.md` (if skills shift)
+- Updated `openclaw/GOVERNANCE.md` review chain (if reviewer role changes)
+- Diffs for every other persona's `AGENTS.md` where the adapting persona was named
+- Updated process pages (`task-kickoff-flow.md`, `milestone-workflow.md`) if the persona's role in those flows changes
+- Updated `observatory.py` `_AGENT_ROSTER` description (if the one-liner changes)
+
+## Grep safety net (run before committing)
+
+```bash
+grep -rln '<agent-id>\|<Name>' /opt/traderb /home/openclaw/.openclaw/workspaces /opt/traderb-wiki 2>/dev/null | grep -v '\.git/'
+```
+
+Verify every match is consistent with the adapted role. Stale references elsewhere mean the adapt is incomplete.
 
 ````
 

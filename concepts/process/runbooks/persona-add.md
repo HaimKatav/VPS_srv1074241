@@ -49,9 +49,26 @@ Agent dir: ~/.openclaw/agents/<agent-id>/agent
 
 **Rollback if this step fails:** none needed — the agent wasn't created if the command errored.
 
-### 2. Draft + write IDENTITY.md, SOUL.md, AGENTS.md
+### 2. Draft persona files AND all cascading updates — ONE review batch
 
-Draft all three files locally in `outputs/review/<batch>/<agent-id>/`. Haim reviews line-by-line.
+**MANDATORY cascading review.** Per `concepts/process/persona-lifecycle.md` §Cascading review rule, step 2 produces:
+
+(a) The new persona's three files:
+
+Draft all three files locally in `outputs/review/<batch>/<agent-id>/`.
+
+(b) In the same review batch, draft the cascading updates — each as a review file:
+  - Updated rows for `_shared/coordination-rules.md` enforcer matrix
+  - New row for `entities/team/index.md` roster + compressed enforcer table
+  - New row for `/opt/traderb/SOUL.md` routing table
+  - New section for `openclaw/SKILLS_REGISTRY.md`
+  - Updated `openclaw/GOVERNANCE.md` review chain (if the new persona is a reviewer)
+  - Diffs for any existing persona's `AGENTS.md` whose relationships shift
+  - Updated rows for process pages: `concepts/process/task-kickoff-flow.md`, `concepts/process/milestone-workflow.md` (if relevant)
+  - New row for `observatory.py` `_AGENT_ROSTER` dict
+  - Run the grep safety net (see end of runbook) and list any additional files the persona needs to be mentioned in
+
+**Haim reviews the ENTIRE batch line-by-line — not the persona files in isolation.**
 
 On approval, write the three files into the workspace:
 
@@ -223,3 +240,11 @@ If workspace was already trashed by `agents delete`, files can be restored from 
 - Policy: `concepts/process/persona-lifecycle.md`
 - OpenClaw docs: https://docs.openclaw.ai/cli/agents
 - Reference example: Idan's creation commit in `HaimKatav/traderb-personas` (commit `40829e9`, 2026-04-14) — first real usage of this flow during bootstrap
+
+## Grep safety net (run before committing)
+
+```bash
+grep -rln '<agent-id>\|<Name>' /opt/traderb /home/openclaw/.openclaw/workspaces /opt/traderb-wiki 2>/dev/null | grep -v '\.git/'
+```
+
+For every file the command lists, confirm the persona's reference is correct. Any file not already in your cascading batch is a gap — update it in the same commit.

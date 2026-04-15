@@ -4,8 +4,8 @@ id: source.persona-lifecycle
 title: Persona Lifecycle
 sourceType: local-file
 sourcePath: /opt/traderb-wiki/concepts/process/persona-lifecycle.md
-ingestedAt: 2026-04-15T12:51:06.668Z
-updatedAt: 2026-04-15T12:51:06.668Z
+ingestedAt: 2026-04-15T14:03:51.526Z
+updatedAt: 2026-04-15T14:03:51.526Z
 status: active
 ---
 
@@ -14,8 +14,8 @@ status: active
 ## Source
 - Type: `local-file`
 - Path: `/opt/traderb-wiki/concepts/process/persona-lifecycle.md`
-- Bytes: 9563
-- Updated: 2026-04-15T12:51:06.668Z
+- Bytes: 12541
+- Updated: 2026-04-15T14:03:51.526Z
 
 ## Content
 ````text
@@ -120,6 +120,43 @@ This is the hard rule. **Whenever a persona lifecycle event touches more than on
 
 If the single-commit rule is broken mid-flight, Ari must note the gap immediately and close it in the next commit. Drift detected in a lint run surfaces to Haim.
 
+
+## Cascading review rule (named principle)
+
+When a persona lifecycle event is proposed, **every downstream document change triggered by that event must be drafted IN THE SAME REVIEW BATCH** as the persona's own IDENTITY/SOUL/AGENTS files. Haim reviews them together, not serially. This is how we prevent drift — and it's how we caught the Guy-add dogfood gap on 2026-04-15, which led to this rule being named.
+
+### Why
+Approving a persona's SOUL without simultaneously reviewing the ripple updates (coordination-rules, team roster, other personas' AGENTS, routing table, SKILLS_REGISTRY, etc.) means the approver cannot judge coherence. They see a character card without seeing the team as it will be on the morning after the commit.
+
+### What "cascading" covers
+
+For EVERY add / remove / material-adapt event, the drafter produces a single review batch containing:
+
+1. The persona's own files — IDENTITY.md, SOUL.md, AGENTS.md (for add; edits of existing for adapt; empty/archive metadata for remove).
+2. `_shared/coordination-rules.md` — enforcer matrix updates.
+3. `entities/team/index.md` — roster update.
+4. `/opt/traderb/SOUL.md` — main router routing table.
+5. `openclaw/SKILLS_REGISTRY.md` — new/edited persona section.
+6. `openclaw/GOVERNANCE.md` — review chain table, if the persona is a reviewer.
+7. Any existing persona's `AGENTS.md` whose enforcer relationships shift — one or more files.
+8. Any process page that names specific enforcers — `concepts/process/task-kickoff-flow.md`, `concepts/process/milestone-workflow.md`, scope-discipline.md — if the persona's role changes those flows.
+9. `observatory.py` static roster dict — add/remove/update the persona entry; update comment if deprecating a referenced file.
+10. Any active handoffs that must be reassigned (remove event only).
+
+### Grep safety net
+
+Before committing ANY lifecycle event, run this command and update every file it lists that references the changing persona:
+
+```bash
+grep -rln '<agent-id>\|<Name>' /opt/traderb /home/openclaw/.openclaw/workspaces /opt/traderb-wiki 2>/dev/null | grep -v '\.git/'
+```
+
+Any file in the output that contains stale or obsolete language about the persona must be updated in the same commit. No stragglers.
+
+### Stage 1 note
+
+During bootstrap seeding (Stage 1 now), Haim + admin execute lifecycle events directly and drafters present cascading review batches. The Guy-add commit (scheduled 2026-04-15) is the first fully-batched reference example.
+
 ## Wiki update procedure — specific file paths
 
 For every lifecycle event, the files touched are predictable. Codified here so Ari (or admin during Stage 1) doesn't have to rederive:
@@ -133,10 +170,18 @@ Personas repo (/home/openclaw/.openclaw/workspaces/):
 
 Wiki repo (/opt/traderb-wiki/):
 - entities/team/index.md                (always update)
-- _shared/coordination-rules.md         (update if enforcer matrix shifts — which is most cases)
+- concepts/process/task-kickoff-flow.md (update Step 2 enforcer list if relevant)
+- concepts/process/milestone-workflow.md(update if persona-specific phase language)
+
+Personas repo (_shared/):
+- _shared/coordination-rules.md         (update enforcer matrix — nearly always)
 
 Main workspace (/opt/traderb/):
 - SOUL.md                              (update main router's routing table)
+- AGENTS.md                            (update if references main's routing)
+- openclaw/SKILLS_REGISTRY.md          (new/edited persona section — always)
+- openclaw/GOVERNANCE.md               (review chain table — if reviewer role)
+- observatory.py                       (static _AGENT_ROSTER dict — always)
 
 Ingest step (wiki):
 - openclaw wiki ingest /opt/traderb-wiki/entities/team/index.md --title 'TraderB Team Roster'

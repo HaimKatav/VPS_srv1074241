@@ -187,3 +187,27 @@ Or restore from system trash if the archive somehow got skipped.
 - Policy: `concepts/process/persona-lifecycle.md`
 - OpenClaw docs: https://docs.openclaw.ai/cli/agents
 - Related: `concepts/process/runbooks/persona-add.md`, `concepts/process/runbooks/persona-adapt.md`
+
+## Cascading review batch (mandatory)
+
+Per `concepts/process/persona-lifecycle.md` §Cascading review rule, removal produces a single review batch BEFORE execution, covering:
+
+- Updated rows/removals in `_shared/coordination-rules.md` enforcer matrix (every row that references the departing persona)
+- Updated `entities/team/index.md` — move persona row to "Archived" section; update compressed enforcer table
+- Updated `/opt/traderb/SOUL.md` routing table (remove row)
+- Updated `openclaw/SKILLS_REGISTRY.md` (remove section OR move to archive)
+- Updated `openclaw/GOVERNANCE.md` review chain (reassign any reviewer role)
+- Diffs for every other persona's `AGENTS.md` where the departing persona was named
+- Updated process pages (`task-kickoff-flow.md`, `milestone-workflow.md`) if they named the persona
+- Updated `observatory.py` `_AGENT_ROSTER` (remove entry)
+- Retirement synthesis page (`syntheses/meta/persona-retirement_<date>_<agent-id>.md`)
+
+Haim reviews the batch before any OpenClaw CLI command runs.
+
+## Grep safety net (run before committing)
+
+```bash
+grep -rln '<old-agent-id>\|<Old Name>' /opt/traderb /home/openclaw/.openclaw/workspaces /opt/traderb-wiki 2>/dev/null | grep -v '\.git/'
+```
+
+Every hit that still uses active language (not historical/archive context) must be updated in the same commit. Archive references in `_archive/` and retirement synthesis pages are expected to still name the persona — those are OK to leave.

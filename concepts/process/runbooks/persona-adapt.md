@@ -203,3 +203,26 @@ This reclassification is normal — err on the side of caution.
 - Policy: `concepts/process/persona-lifecycle.md`
 - Related runbooks: `concepts/process/runbooks/persona-add.md`, `concepts/process/runbooks/persona-remove.md`
 - OpenClaw docs: https://docs.openclaw.ai/cli/agents
+
+## Cascading review batch (mandatory for material changes)
+
+Per `concepts/process/persona-lifecycle.md` §Cascading review rule, material-adapt events produce a single review batch BEFORE execution. Minor edits are exempt from batch review but still commit atomically.
+
+Material-adapt batch covers (as applicable to what's changing):
+
+- Updated `_shared/coordination-rules.md` enforcer matrix (if relationships shift)
+- Updated `entities/team/index.md` (if role description or relationships change)
+- Updated `/opt/traderb/SOUL.md` routing table (if the domain one-liner changes)
+- Updated `openclaw/SKILLS_REGISTRY.md` (if skills shift)
+- Updated `openclaw/GOVERNANCE.md` review chain (if reviewer role changes)
+- Diffs for every other persona's `AGENTS.md` where the adapting persona was named
+- Updated process pages (`task-kickoff-flow.md`, `milestone-workflow.md`) if the persona's role in those flows changes
+- Updated `observatory.py` `_AGENT_ROSTER` description (if the one-liner changes)
+
+## Grep safety net (run before committing)
+
+```bash
+grep -rln '<agent-id>\|<Name>' /opt/traderb /home/openclaw/.openclaw/workspaces /opt/traderb-wiki 2>/dev/null | grep -v '\.git/'
+```
+
+Verify every match is consistent with the adapted role. Stale references elsewhere mean the adapt is incomplete.
