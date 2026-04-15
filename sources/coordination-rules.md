@@ -4,8 +4,8 @@ id: source.coordination-rules
 title: Coordination Rules
 sourceType: local-file
 sourcePath: /home/openclaw/.openclaw/workspaces/_shared/coordination-rules.md
-ingestedAt: 2026-04-15T14:04:42.045Z
-updatedAt: 2026-04-15T14:04:42.045Z
+ingestedAt: 2026-04-15T14:09:52.924Z
+updatedAt: 2026-04-15T14:09:52.924Z
 status: active
 ---
 
@@ -14,8 +14,8 @@ status: active
 ## Source
 - Type: `local-file`
 - Path: `/home/openclaw/.openclaw/workspaces/_shared/coordination-rules.md`
-- Bytes: 8684
-- Updated: 2026-04-15T14:04:42.045Z
+- Bytes: 8899
+- Updated: 2026-04-15T14:09:52.924Z
 
 ## Content
 ```text
@@ -60,7 +60,8 @@ All work is measured in **tries**, not time. One try = one agent spawn attemptin
 | **Eitan** (devops) | cross-cuts with **Idan** on infra patterns | **Tamar** for hardening | **Ari** | — |
 | **Omer** (risk-manager) | — | **Shira** (compliance) as peer | **Ari** | — |
 | **Shira** (compliance) | — | **Omer** (risk) as peer | **Ari** | — |
-| **Yael** (qa-tester) | — | every implementer she tests | **Ari** | — |
+| **Guy** (qa-manager) | — (enforces others on QA scope) | peer to **Idan** (test infra) / **Omer**+**Shira** (coverage) | **Ari** | — |
+| **Yael** (qa-tester) | — | every implementer she tests; executes per **Guy's** QA frame | **Ari / Guy** | — |
 | **Idan** (software-architect) | — (he enforces others) | peer to **Noa/Tamar/Omer** | **Ari** | — |
 | **Ari** (project-lead) | — | — | **Haim** | — |
 
@@ -71,7 +72,7 @@ All work is measured in **tries**, not time. One try = one agent spawn attemptin
 - Data pipeline / schema → Dan
 - Secrets / auth / API keys → Tamar
 - VPS / Docker / deployment / CI-CD → Eitan
-- Every change: Ari closes the ticket. Yael tests.
+- Every change: Ari closes the ticket. Guy frames the QA; Yael executes.
 
 ## QA bug loop (Yael owns this)
 
@@ -108,7 +109,7 @@ QA sessions work in isolation — they do not share context. If two tasks would 
 ### Two QA sessions or a second QA persona — how they coordinate
 
 If two QA sessions (same persona, parallel instances OR a future second QA persona with different specialty) touch overlapping scope:
-- **Agents do not chat directly.** All coordination is via handoffs mediated by Ari or the QA Manager (when that role exists).
+- **Agents do not chat directly.** All coordination is via handoffs mediated by **Guy** (QA scope + arbitration) and Ari (sprint priority).
 - **Three patterns depending on overlap type:**
   - **Deduplicate** — one session covers both tasks QA need.
   - **Split** — each session tests its own task scope; if results disagree, arbitrate.

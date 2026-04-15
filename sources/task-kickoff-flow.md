@@ -4,8 +4,8 @@ id: source.task-kickoff-flow
 title: Task Kickoff Flow
 sourceType: local-file
 sourcePath: /opt/traderb-wiki/concepts/process/task-kickoff-flow.md
-ingestedAt: 2026-04-15T11:53:09.629Z
-updatedAt: 2026-04-15T11:53:09.629Z
+ingestedAt: 2026-04-15T14:09:28.284Z
+updatedAt: 2026-04-15T14:09:28.284Z
 status: active
 ---
 
@@ -14,8 +14,8 @@ status: active
 ## Source
 - Type: `local-file`
 - Path: `/opt/traderb-wiki/concepts/process/task-kickoff-flow.md`
-- Bytes: 10581
-- Updated: 2026-04-15T11:53:09.629Z
+- Bytes: 10720
+- Updated: 2026-04-15T14:09:28.284Z
 
 ## Content
 ```text
@@ -45,6 +45,7 @@ This page defines how that translation happens. It puts the **domain experts** i
 
 Based on what the spec touches, Ari identifies which enforcers apply (see `concepts/coding/scope-discipline.md` §Enforcers required by domain) and distributes via individual handoffs:
 - `openclaw/handoffs/ari-to-idan_<date>_<task-slug>.md` (always)
+- `openclaw/handoffs/ari-to-qa-manager_<date>_<task-slug>.md` (always — Guy produces the QA frame)
 - Plus whichever of Rotem / Shira / Tamar / Omer / Dan / Gal are relevant
 
 The handoff includes: the approved spec, the scope hints Ari sees, the expected output from this enforcer.
@@ -165,7 +166,7 @@ Work flows DOWN (Ari → enforcers → coder) and also UP (coder back → enforc
 | Step | Who acts | Who reviews |
 |---|---|---|
 | 1 — distribute | Ari | — |
-| 2 — domain breakdown | each enforcer (parallel) | — |
+| 2 — domain breakdown | each enforcer (parallel), including **Guy** producing QA frame | — |
 | 3 — alignment / escalate | enforcers state positions | Ari packages for Haim if disagreement |
 | 4 — collate brief | Ari | — |
 | 5 — create tasks | coder | — |

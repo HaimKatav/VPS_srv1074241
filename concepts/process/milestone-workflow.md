@@ -63,7 +63,7 @@ Builders (Lior, Maya, Dan, Gal) receive the approved specs and enter the **task-
 - Code review happens continuously under the enforcer matrix (see _shared/coordination-rules.md).
 
 ### 7. QA CYCLE
-Yael tests against the approved specs DOD. Bug loop per coordination-rules QA bug loop — up to 3 fix-retest cycles before escalation to a debug meeting.
+**Guy** (qa-manager) defined the QA frame in step 6 (task-kickoff-flow step 2). **Yael** executes per Guy's frame, creating her own concrete testing sub-tasks for each item in the frame, and tests against the approved spec's DOD. Bug loop per coordination-rules §QA bug loop — up to 3 fix-retest cycles before Guy escalates to a debug meeting.
 
 **Gate:** QA passes OR a debug-meeting decision is produced (re-scope / re-implement / re-design).
 

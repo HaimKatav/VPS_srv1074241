@@ -4,8 +4,8 @@ id: source.traderb-team-roster
 title: TraderB Team Roster
 sourceType: local-file
 sourcePath: /opt/traderb-wiki/entities/team/index.md
-ingestedAt: 2026-04-15T12:25:24.200Z
-updatedAt: 2026-04-15T12:25:24.200Z
+ingestedAt: 2026-04-15T14:09:15.929Z
+updatedAt: 2026-04-15T14:09:15.929Z
 status: active
 ---
 
@@ -14,8 +14,8 @@ status: active
 ## Source
 - Type: `local-file`
 - Path: `/opt/traderb-wiki/entities/team/index.md`
-- Bytes: 5066
-- Updated: 2026-04-15T12:25:24.200Z
+- Bytes: 5411
+- Updated: 2026-04-15T14:09:15.929Z
 
 ## Content
 ```text
@@ -35,7 +35,7 @@ updatedAt: 2026-04-15
 
 Team size and composition may change. Update this page when personas are added, renamed, or removed. The full enforcer matrix (who reviews what by aspect) lives in `_shared/coordination-rules.md` — this page is just the roster and primary relationships.
 
-## The crew (15 agents)
+## The crew (16 agents)
 
 | Agent ID | Name | Emoji | Domain | One-line role |
 |---|---|---|---|---|
@@ -46,7 +46,8 @@ Team size and composition may change. Update this page when personas are added, 
 | `python-dev` | **Lior** | 🐍 | implementation | Core Python implementer — adapters, tests, bot logic. |
 | `frontend-dev` | **Maya** | — | implementation | HTML/CSS/JS dashboard + debug browser. |
 | `data-engineer` | **Dan** | — | data | Data feeds, pipeline, schema validation. |
-| `qa-tester` | **Yael** | — | QA | Testing, bug reports, regression. Bug-loop owner. |
+| `qa-tester` | **Yael** | — | QA execution | Executes QA sub-tasks per Guy's QA frame. Bug-loop owner. |
+| `qa-manager` | **Guy** | 🧪 | QA coordination | Owns QA frames + priority + verdict arbitration. Guy frames; Yael executes. |
 | `devops` | **Eitan** | — | infrastructure | VPS, Docker, deployment, monitoring. CI/CD owner. Git gate for trading-touching code. |
 | `security-specialist` | **Tamar** | — | security | Auth, secrets, network hardening, data-exposure review. |
 | `risk-manager` | **Omer** | — | risk | Market risk, stress testing, drawdowns, money impact. |
@@ -61,18 +62,19 @@ The full matrix is in `_shared/coordination-rules.md`. This table is the compres
 
 | You are… | Your architecture enforcer | Your domain enforcer(s) | Your QA | Your process gate |
 |---|---|---|---|---|
-| Lior (python-dev) | **Idan** | Omer + Shira (if trading), Tamar (if secrets/API) | Yael | Ari |
-| Maya (frontend-dev) | **Idan** | Rotem (visuals) | Yael | Ari |
-| Dan (data-engineer) | **Idan** | Noa (if strategy), Gal (if log schema) | Yael | Ari |
-| Gal (logging-specialist) | **Idan** (log arch) | Amit (explainability) | Yael | Ari |
-| Noa (strategy-architect) | — (domain architect) | Omer + Shira (peers) | Yael | Ari |
+| Lior (python-dev) | **Idan** | Omer + Shira (if trading), Tamar (if secrets/API) | Guy (frame) → Yael (exec) | Ari |
+| Maya (frontend-dev) | **Idan** | Rotem (visuals) | Guy (frame) → Yael (exec) | Ari |
+| Dan (data-engineer) | **Idan** | Noa (if strategy), Gal (if log schema) | Guy (frame) → Yael (exec) | Ari |
+| Gal (logging-specialist) | **Idan** (log arch) | Amit (explainability) | Guy (frame) → Yael (exec) | Ari |
+| Noa (strategy-architect) | — (domain architect) | Omer + Shira (peers) | Guy (frame) → Yael (exec) | Ari |
 | Amit (transparency-agent) | Idan | Gal + Rotem | — | Ari |
 | Rotem (ux-designer) | — | — | — | Ari |
 | Tamar (security) | Idan (on boundaries) | — | — | Ari |
 | Eitan (devops) | Idan (on infra patterns) | Tamar (hardening) | — | Ari |
 | Omer (risk) | — | Shira (peer) | — | Ari |
 | Shira (compliance) | — | Omer (peer) | — | Ari |
-| Yael (qa-tester) | — | every implementer tested | — | Ari |
+| Yael (qa-tester) | — | Guy (scope owner) | — | Ari |
+| Guy (qa-manager) | Idan (test infra) | Omer/Shira (coverage constraints) | — | Ari |
 | Idan (software-architect) | — (enforces others) | Noa/Tamar/Omer (peers on cross-cutting) | — | Ari |
 | Ari (project-lead) | — | — | — | **Haim** |
 | main (router) | — | — | — | — |

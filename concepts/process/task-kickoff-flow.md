@@ -24,6 +24,7 @@ This page defines how that translation happens. It puts the **domain experts** i
 
 Based on what the spec touches, Ari identifies which enforcers apply (see `concepts/coding/scope-discipline.md` §Enforcers required by domain) and distributes via individual handoffs:
 - `openclaw/handoffs/ari-to-idan_<date>_<task-slug>.md` (always)
+- `openclaw/handoffs/ari-to-qa-manager_<date>_<task-slug>.md` (always — Guy produces the QA frame)
 - Plus whichever of Rotem / Shira / Tamar / Omer / Dan / Gal are relevant
 
 The handoff includes: the approved spec, the scope hints Ari sees, the expected output from this enforcer.
@@ -144,7 +145,7 @@ Work flows DOWN (Ari → enforcers → coder) and also UP (coder back → enforc
 | Step | Who acts | Who reviews |
 |---|---|---|
 | 1 — distribute | Ari | — |
-| 2 — domain breakdown | each enforcer (parallel) | — |
+| 2 — domain breakdown | each enforcer (parallel), including **Guy** producing QA frame | — |
 | 3 — alignment / escalate | enforcers state positions | Ari packages for Haim if disagreement |
 | 4 — collate brief | Ari | — |
 | 5 — create tasks | coder | — |
