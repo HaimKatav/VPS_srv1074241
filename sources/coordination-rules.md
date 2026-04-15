@@ -4,8 +4,8 @@ id: source.coordination-rules
 title: Coordination Rules
 sourceType: local-file
 sourcePath: /home/openclaw/.openclaw/workspaces/_shared/coordination-rules.md
-ingestedAt: 2026-04-15T09:52:37.460Z
-updatedAt: 2026-04-15T09:52:37.460Z
+ingestedAt: 2026-04-15T12:51:19.246Z
+updatedAt: 2026-04-15T12:51:19.246Z
 status: active
 ---
 
@@ -14,8 +14,8 @@ status: active
 ## Source
 - Type: `local-file`
 - Path: `/home/openclaw/.openclaw/workspaces/_shared/coordination-rules.md`
-- Bytes: 6358
-- Updated: 2026-04-15T09:52:37.460Z
+- Bytes: 8684
+- Updated: 2026-04-15T12:51:19.246Z
 
 ## Content
 ```text
@@ -86,6 +86,43 @@ When QA finds a bug, it is NOT send back to Ari and restart. It is a direct conv
    - Decide: re-scope, re-implement, or re-design
    - Produce a decision page (via handoff to Ari for wiki ingestion)
    - Then either redo or close-with-known-issue
+
+
+## QA capacity + parallelism
+
+Agents do not block on each other at the session level. When multiple coders finish simultaneously, main spawns multiple Yael sessions in parallel — each isolated, each testing its own task. Yael the persona does not bottleneck; Yael session N is unique per task.
+
+### Priority ordering
+
+Ari owns the QA priority queue:
+- **P0** — trading-bug, parity regression, money-adjacent failure → tested first, before other work proceeds
+- **P1** — feature-blocking bugs and regressions → tested next
+- **P2** — non-blocking bugs, doc fixes → tested as capacity allows
+
+If Ari is not explicitly prioritizing, Yael tests in task-arrival order.
+
+### Cross-task awareness (merge-time concern)
+
+QA sessions work in isolation — they do not share context. If two tasks would individually pass QA but clash at merge time (conflicting changes to the same module, contradictory compliance interpretations), that is an **Ari responsibility at merge gate**, not Yael is. Ari reviews the combined diff before approving merge to develop.
+
+### Two QA sessions or a second QA persona — how they coordinate
+
+If two QA sessions (same persona, parallel instances OR a future second QA persona with different specialty) touch overlapping scope:
+- **Agents do not chat directly.** All coordination is via handoffs mediated by Ari or the QA Manager (when that role exists).
+- **Three patterns depending on overlap type:**
+  - **Deduplicate** — one session covers both tasks QA need.
+  - **Split** — each session tests its own task scope; if results disagree, arbitrate.
+  - **Collaborate** — one session writes a test, another reviews it. Via mediated handoff.
+- **Verdict conflicts** (one says pass, other says fail): escalate → debug meeting → decision page.
+
+### Capacity trigger
+
+If Yael queue is persistently more than 3 tasks deep for more than a sprint, that is a capacity signal. Options, in order of preference:
+1. Reduce in-flight task count (reduce milestone concurrent scope)
+2. Add specific QA automation (more regression fixtures)
+3. **Add a second QA persona** via concepts/process/persona-lifecycle.md — typically specialized (e.g. regression vs exploratory testing)
+
+Do not add a second QA persona preemptively. Measure first; split when measurement shows persistent overflow.
 
 ## Handoff hygiene
 

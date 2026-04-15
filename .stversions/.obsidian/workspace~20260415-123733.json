@@ -185,6 +185,12 @@
   },
   "active": "13140d525f5f536e",
   "lastOpenFiles": [
+    "sources/traderb-team-roster.md",
+    "entities/team/index.md",
+    "entities/team",
+    "sources/scope-discipline-for-coding-tasks.md",
+    "sources/task-kickoff-flow.md",
+    "concepts/process/task-kickoff-flow.md",
     "sources/milestone-workflow.md",
     "concepts/process/milestone-workflow.md",
     "concepts/process",
@@ -208,18 +214,12 @@
     "syntheses/postmortems/index.md",
     "concepts/meta/index.md",
     "entities/projects/index.md",
-    "concepts/ux/index.md",
-    "syntheses/milestones/index.md",
     "concepts/ux",
     "entities/infra",
     "concepts/meta",
     "concepts/coding",
     "syntheses/postmortems",
     "syntheses/journal",
-    "sources/bridge",
-    "syntheses/milestones",
-    "reports/contradictions.md",
-    "index.md",
-    "WIKI.md"
+    "sources/bridge"
   ]
 }

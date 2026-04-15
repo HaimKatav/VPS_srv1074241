@@ -185,6 +185,12 @@
   },
   "active": "13140d525f5f536e",
   "lastOpenFiles": [
+    "sources/scope-discipline-for-coding-tasks.md",
+    "sources/task-kickoff-flow.md",
+    "concepts/process/task-kickoff-flow.md",
+    "sources/milestone-workflow.md",
+    "concepts/process/milestone-workflow.md",
+    "concepts/process",
     "concepts/_test/empirical-probe.md",
     "concepts/_test",
     "entities/index.md",
@@ -214,12 +220,6 @@
     "syntheses/postmortems",
     "syntheses/journal",
     "sources/bridge",
-    "syntheses/milestones",
-    "syntheses/ux",
-    "reports/contradictions.md",
-    "index.md",
-    "WIKI.md",
-    "TraderB_Wiki_Plan.md",
-    "syntheses/index.md"
+    "syntheses/milestones"
   ]
 }
