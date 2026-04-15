@@ -1,10 +1,13 @@
-Now I have enough research foundation. Let me synthesize comprehensive one-pagers for all 15 personas, drawing on these professional references while tailoring them to TraderB's specific context.
+---
+pageType: source
+id: source.role-briefs-research
+title: Role Briefs — Research
+status: active
+approved-by-haim: false
+domain: meta
+updatedAt: 2026-04-15
+---
 
-## Persona Briefs for TraderB
-
-Based on research into small agile teams, trading systems, and role specialization, here are the 15 specialist persona briefs:
-
-```markdown
 # TraderB Team Personas: Detailed Role Briefs
 
 ## Persona: Project Lead (Ari) 📋

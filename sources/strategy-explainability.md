@@ -1,11 +1,11 @@
-## Related
-<!-- openclaw:wiki:related:start -->
-- No related pages yet.
-<!-- openclaw:wiki:related:end -->
-le
+---
+pageType: source
+id: source.strategy-explainability
+title: strategy explainability
+sourceType: local-file
 sourcePath: /opt/traderb-wiki/concepts/ux/strategy-explainability.md
-ingestedAt: 2026-04-15T22:48:04.402Z
-updatedAt: 2026-04-15T22:48:04.402Z
+ingestedAt: 2026-04-15T22:51:40.045Z
+updatedAt: 2026-04-15T22:51:40.045Z
 status: active
 ---
 
@@ -15,7 +15,7 @@ status: active
 - Type: `local-file`
 - Path: `/opt/traderb-wiki/concepts/ux/strategy-explainability.md`
 - Bytes: 6143
-- Updated: 2026-04-15T22:48:04.402Z
+- Updated: 2026-04-15T22:51:40.045Z
 
 ## Content
 ```text
@@ -121,3 +121,8 @@ When the UI shows which components fired, it also shows which components were **
 ## Notes
 <!-- openclaw:human:start -->
 <!-- openclaw:human:end -->
+
+## Related
+<!-- openclaw:wiki:related:start -->
+- No related pages yet.
+<!-- openclaw:wiki:related:end -->
