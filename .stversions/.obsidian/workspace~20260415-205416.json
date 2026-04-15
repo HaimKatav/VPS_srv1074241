@@ -178,6 +178,8 @@
   },
   "active": "d711777957a17a1e",
   "lastOpenFiles": [
+    "sources/code-quality-principles.md",
+    "sources/scope-discipline.md",
     "sources/persona-adapt.md",
     "sources/persona-remove.md",
     "sources/persona-add.md",
@@ -206,8 +208,6 @@
     "concepts/process",
     "concepts/_test/empirical-probe.md",
     "concepts/_test",
-    "entities/index.md",
-    "entities/services/index.md",
     "concepts/ux",
     "entities/infra",
     "concepts/meta",

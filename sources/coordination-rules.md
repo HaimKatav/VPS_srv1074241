@@ -176,6 +176,8 @@ Agents may read lower-confidence pages for context but **must not cite** inferre
 <!-- openclaw:wiki:related:start -->
 ### Referenced By
 
+- [[sources/code-quality-principles|code quality principles]]
+- [[sources/configurable-strategy-components|configurable strategy components]]
 - [[sources/milestone-workflow|Milestone Workflow]]
 - [[sources/persona-adapt|Persona Adapt]]
 - [[sources/persona-add|Persona Add]]
@@ -185,6 +187,7 @@ Agents may read lower-confidence pages for context but **must not cite** inferre
 - [[sources/runbook-remove-a-persona|Runbook: Remove a Persona]]
 - [[sources/scope-discipline|Scope Discipline]]
 - [[sources/scope-discipline-for-coding-tasks|Scope Discipline for Coding Tasks]]
+- [[sources/strategy-explainability|strategy explainability]]
 - [[sources/task-kickoff-flow|Task Kickoff Flow]]
 - [[sources/traderb-team-roster|TraderB Team Roster]]
 <!-- openclaw:wiki:related:end -->
